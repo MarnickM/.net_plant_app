@@ -4,12 +4,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:plantdration"
+    xmlns:views="clr-namespace:plantdration.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="plantdration">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+        Title="Users"
+        ContentTemplate="{DataTemplate views:UserListView}"
+        Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}" />
+    </TabBar>
 
 </Shell>

@@ -29,6 +29,10 @@ namespace plantdration.Models
             Id = id;
             Name = name;
         }
+
+        public User()
+        {
+        }
     }
 }
 
