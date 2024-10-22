@@ -7,9 +7,8 @@
         public string Species { get; set; }
         public string WateringFrequency { get; set; }
         public string Image { get; set; }
-        // a plant belongs to a user, add the foreign key
-        public int UserId { get; set; }
-        // a plant belongs to a user, add the navigation property
-        public User? User { get; set; }
+
+        // A plant has many users, through the association table
+        public List<UserPlant> UserPlants { get; set; }
     }
 }
