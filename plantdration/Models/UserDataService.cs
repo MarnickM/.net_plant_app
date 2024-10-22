@@ -23,9 +23,9 @@ namespace plantdration.Models
             await ApiService<User>.PutAsync($"users/{user.Id}", user);
         }
 
-        public async static Task DeleteUserAsync(User user)
+        public async static Task DeleteUserAsync(int id)
         {
-            await ApiService<User>.DeleteAsync($"users/{user.Id}");
+            await ApiService<User>.DeleteAsync($"users/{id}");
         }
     }
 }
