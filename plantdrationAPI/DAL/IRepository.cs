@@ -6,6 +6,8 @@
 
        Task<T> GetByID(int id);
 
+       Task<T> GetByName(string name);
+
        Task Insert(T obj);
 
        void Delete(int id);

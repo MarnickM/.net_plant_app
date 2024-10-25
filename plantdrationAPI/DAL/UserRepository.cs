@@ -1,5 +1,4 @@
 ﻿using plantdrationAPI.Models;
-using plantdrationAPI.DAL;
 using Microsoft.EntityFrameworkCore;
 
 namespace PlantdrationAPI.DAL
@@ -27,6 +26,10 @@ namespace PlantdrationAPI.DAL
         public async Task<User> GetByID(int id)
         {
             return await _context.Users.FindAsync(id);
+        }
+        public async Task<User> GetByName(string name)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.Name.ToLower() == name.ToLower());
         }
 
         public async Task Insert(User obj)

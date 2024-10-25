@@ -18,11 +18,11 @@ namespace plantdrationAPI
             // Seed Users
             var user1 = new User
             {
-                name = "plantlover123"
+                Name = "Marnick"
             };
             var user2 = new User
             {
-                name = "greenThumb"
+                Name = "Sen"
             };
 
             context.Users.AddRange(user1, user2);
@@ -31,27 +31,140 @@ namespace plantdrationAPI
             // Seed Plants
             var plant1 = new Plant
             {
-                Name = "Aloe Vera",
-                Species = "Aloe barbadensis",
-                WateringFrequency = "Weekly",
-                Image = "aloevera.jpg"
-            };
-            var plant2 = new Plant
-            {
-                Name = "Snake Plant",
-                Species = "Sansevieria trifasciata",
-                WateringFrequency = "Biweekly",
-                Image = "snakeplant.jpg"
-            };
-            var plant3 = new Plant
-            {
-                Name = "Peace Lily",
-                Species = "Spathiphyllum",
-                WateringFrequency = "Weekly",
-                Image = "peacelily.jpg"
+                Name = "Chrysant",
+                Species = "Chrysanthemum morifolium",
+                WateringFrequencyInDays = 7, // Weekly
+                SunlightRequirement = "Volle zon tot gedeeltelijke schaduw",
+                HeightInCentimeters = 60,
+                GrowthRateInCmPerYear = 20, // Example value, modify as needed
+                LastWatered = DateTime.Now,
+                IsIndoorPlant = false,
+                SoilType = "Goed doorlatende grond",
+                MinTemperature = 15,
+                PhotoUrl = "chrysanthemum.jpg" // Placeholder image URL
             };
 
-            context.Plants.AddRange(plant1, plant2, plant3);
+            var plant2 = new Plant
+            {
+                Name = "Vetplant",
+                Species = "Crassula muscosa",
+                WateringFrequencyInDays = 14, // Biweekly
+                SunlightRequirement = "Volle zon tot gedeeltelijke schaduw",
+                HeightInCentimeters = 30,
+                GrowthRateInCmPerYear = 15, // Example value, modify as needed
+                LastWatered = DateTime.Now,
+                IsIndoorPlant = true,
+                SoilType = "Cactusmix",
+                MinTemperature = 10,
+                PhotoUrl = "crassula_muscosa.jpg" // Placeholder image URL
+            };
+
+            var plant3 = new Plant
+            {
+                Name = "Kruipende Crassula",
+                Species = "Crassula perforata",
+                WateringFrequencyInDays = 14,
+                SunlightRequirement = "Volle zon",
+                HeightInCentimeters = 30,
+                GrowthRateInCmPerYear = 15, // Example value, modify as needed
+                LastWatered = DateTime.Now,
+                IsIndoorPlant = true,
+                SoilType = "Cactusmix",
+                MinTemperature = 10,
+                PhotoUrl = "crassula_perforata.jpg" // Placeholder image URL
+            };
+
+            var plant4 = new Plant
+            {
+                Name = "Euphorbia",
+                Species = "Euphorbia nivulia",
+                WateringFrequencyInDays = 14,
+                SunlightRequirement = "Volle zon",
+                HeightInCentimeters = 50,
+                GrowthRateInCmPerYear = 10, // Example value, modify as needed
+                LastWatered = DateTime.Now,
+                IsIndoorPlant = false,
+                SoilType = "Zanderige, goed doorlatende grond",
+                MinTemperature = 10,
+                PhotoUrl = "euphorbia_nivulia.jpg" // Placeholder image URL
+            };
+
+            var plant5 = new Plant
+            {
+                Name = "Graslelie",
+                Species = "Chlorophytum comosum",
+                WateringFrequencyInDays = 7,
+                SunlightRequirement = "Indirecte zon",
+                HeightInCentimeters = 60,
+                GrowthRateInCmPerYear = 30, // Example value, modify as needed
+                LastWatered = DateTime.Now,
+                IsIndoorPlant = true,
+                SoilType = "Goed doorlatende potgrond",
+                MinTemperature = 10,
+                PhotoUrl = "chlorophytum_comosum.jpg" // Placeholder image URL
+            };
+
+            var plant6 = new Plant
+            {
+                Name = "Orchidee",
+                Species = "Orchidaceae",
+                WateringFrequencyInDays = 7, // Every 7-10 days
+                SunlightRequirement = "Indirecte zon",
+                HeightInCentimeters = 60, // Varies widely
+                GrowthRateInCmPerYear = 5, // Example value, modify as needed
+                LastWatered = DateTime.Now,
+                IsIndoorPlant = true,
+                SoilType = "Orchideemix (schors)",
+                MinTemperature = 20,
+                PhotoUrl = "orchidaceae.jpg" // Placeholder image URL
+            };
+
+            var plant7 = new Plant
+            {
+                Name = "Kamchatka Steenkruid",
+                Species = "Phedimus kamtschaticus",
+                WateringFrequencyInDays = 21,
+                SunlightRequirement = "Volle zon",
+                HeightInCentimeters = 30,
+                GrowthRateInCmPerYear = 10, // Example value, modify as needed
+                LastWatered = DateTime.Now,
+                IsIndoorPlant = false,
+                SoilType = "Goed doorlatende grond",
+                MinTemperature = 5,
+                PhotoUrl = "phedimus_kamtschaticus.jpg" // Placeholder image URL
+            };
+
+            var plant8 = new Plant
+            {
+                Name = "Hernandez' Steenkruid",
+                Species = "Sedum hernandezii",
+                WateringFrequencyInDays = 21,
+                SunlightRequirement = "Volle zon",
+                HeightInCentimeters = 15,
+                GrowthRateInCmPerYear = 5, // Example value, modify as needed
+                LastWatered = DateTime.Now,
+                IsIndoorPlant = true,
+                SoilType = "Cactusmix",
+                MinTemperature = 10,
+                PhotoUrl = "sedum_hernandezii.jpg" // Placeholder image URL
+            };
+
+            var plant9 = new Plant
+            {
+                Name = "Balcactus",
+                Species = "Tephrocactus verschaffeltii",
+                WateringFrequencyInDays = 21,
+                SunlightRequirement = "Volle zon",
+                HeightInCentimeters = 40,
+                GrowthRateInCmPerYear = 3, // Example value, modify as needed
+                LastWatered = DateTime.Now,
+                IsIndoorPlant = false,
+                SoilType = "Cactusmix",
+                MinTemperature = 10,
+                PhotoUrl = "tephrocactus_verschaffeltii.jpg" // Placeholder image URL
+            };
+
+            context.Plants.AddRange(plant1, plant2, plant3, plant4, plant5, plant6, plant7, plant8, plant9);
             context.SaveChanges();
 
             // Seed UserPlant (Many-to-Many Relationship)
