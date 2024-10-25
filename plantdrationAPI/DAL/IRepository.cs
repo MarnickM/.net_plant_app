@@ -1,14 +1,16 @@
-﻿namespace plantdrationAPI.DAL
+﻿namespace PlantdrationAPI.DAL
 {
     public interface IRepository<T>
     {
        Task<IEnumerable<T>> GetAll();
 
-       T GetByID(int id);
+       Task<T> GetByID(int id);
+
+       Task<T> GetByName(string name);
 
        Task Insert(T obj);
 
-       Task Delete(int id);
+       void Delete(int id);
 
        T Update(T obj);
        Task Save();
