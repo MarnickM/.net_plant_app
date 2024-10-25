@@ -1,38 +1,48 @@
 ﻿using plantdrationAPI.Models;
 using plantdrationAPI.DAL;
+using Microsoft.EntityFrameworkCore;
 
-namespace Plantdration_.API.DAL
+namespace PlantdrationAPI.DAL
 {
     public class PlantRepository : IRepository<Plant>
     {
-        public Task Delete(int id)
+        private PlantContext _context;
+
+        public PlantRepository(PlantContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task<IEnumerable<Plant>> GetAll()
+        public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var plant = _context.Plants.Find(id);
+            _context.Plants.Remove(plant);
         }
 
-        public Plant GetByID(int id)
+        public async Task<IEnumerable<Plant>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.Plants.ToListAsync();
         }
 
-        public Task Insert(Plant obj)
+        public async Task<Plant> GetByID(int id)
         {
-            throw new NotImplementedException();
+            return await _context.Plants.FindAsync(id);
         }
 
-        public Task Save()
+        public async Task Insert(Plant obj)
         {
-            throw new NotImplementedException();
+            await _context.Plants.AddAsync(obj);
+        }
+
+        public async Task Save()
+        {
+            await _context.SaveChangesAsync();
         }
 
         public Plant Update(Plant obj)
         {
-            throw new NotImplementedException();
+            _context.Plants.Update(obj);
+            return obj;
         }   
     }
 }

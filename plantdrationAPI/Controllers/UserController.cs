@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Plantdration_.API.Controllers
+namespace PlantdrationAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
