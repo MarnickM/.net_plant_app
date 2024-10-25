@@ -34,7 +34,8 @@ namespace plantdration.ViewModels
         }
 
         public ICommand AddUserCommand { get; set; }
-        public ICommand UpdateUserCommand { get; set; }
+        /*public ICommand UpdateUserCommand { get; set; }*/
+        public ICommand SelectUserCommand { get; set; }
 
         private INavigationService _navigationService;
 
@@ -56,7 +57,8 @@ namespace plantdration.ViewModels
         private void BindCommands()
         {
             AddUserCommand = new AsyncRelayCommand(GoToDetailsAdd);
-            UpdateUserCommand = new AsyncRelayCommand(GoToDetailsUpdate);
+            /*UpdateUserCommand = new AsyncRelayCommand(GoToDetailsUpdate);*/
+            SelectUserCommand = new AsyncRelayCommand(GoToHome);
 
         }
 
@@ -65,9 +67,15 @@ namespace plantdration.ViewModels
             await _navigationService.NavigateToDetailsPageAsync();
         }
 
-        private async Task GoToDetailsUpdate()
+        /*private async Task GoToDetailsUpdate()
         {
             await _navigationService.NavigateToDetailsPageAsync();
+            WeakReferenceMessenger.Default.Send(new UserSelectedMessage(selectedUser));
+        }*/
+
+        private async Task GoToHome()
+        {
+            await _navigationService.NavigateToHomePageAsync();
             WeakReferenceMessenger.Default.Send(new UserSelectedMessage(selectedUser));
         }
     }

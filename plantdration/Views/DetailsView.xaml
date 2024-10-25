@@ -5,26 +5,27 @@
              
              xmlns:viewModels="clr-namespace:plantdration.ViewModels"
 			 x:DataType="viewModels:IDetailsViewModel"
-             
-             Title="Details">
+             Shell.TitleColor="White"
+             Shell.BackgroundColor="ForestGreen"
+             Title="User">
 
-    <ScrollView>
+    <ScrollView BackgroundColor="LimeGreen">
         <StackLayout Padding="30">
 
             <Label Text="Name"
                FontSize="Medium"
                Margin="0,10,0,0"/>
-            <Entry Text="{Binding User.Name}"
+            <Entry BackgroundColor="DarkGreen" TextColor="White" Text="{Binding User.Name}"
                Placeholder="Enter your name"/>
 
-            <Button Text="{Binding SaveText}"
+            <Button BackgroundColor="ForestGreen" TextColor="White" Text="{Binding SaveText}"
 				Command="{Binding SaveCommand}"
                 Margin="0,20,0,0"/>
-            <Button Text="Delete"
+            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Delete"
 				Command="{Binding DeleteCommand}"
 				IsVisible="{Binding CanDelete}"
 				Margin="0,5,0,0"/>
-            <Button Text="Cancel"
+            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Cancel"
 				Command="{Binding CancelCommand}"
 				Margin="0,5,0,0"/>
         </StackLayout>
