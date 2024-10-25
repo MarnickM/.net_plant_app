@@ -28,6 +28,11 @@ namespace plantdration.Services
             await _navigation.PushAsync(_serviceProvider.GetRequiredService<DetailsView>());
         }
 
+        public async Task NavigateToHomePageAsync()
+        {
+            await _navigation.PushAsync(_serviceProvider.GetRequiredService<HomeView>());
+        }
+
         public async Task NavigateBackAsync()
         {
             if (_navigation.NavigationStack.Count > 1)

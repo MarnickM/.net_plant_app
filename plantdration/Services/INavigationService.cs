@@ -9,6 +9,7 @@ namespace plantdration.Services
     public interface INavigationService
     {
         Task NavigateToDetailsPageAsync();
+        Task NavigateToHomePageAsync();
         Task NavigateBackAsync();
     }
 }
