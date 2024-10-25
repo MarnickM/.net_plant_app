@@ -36,15 +36,12 @@ namespace plantdration.ViewModels
             _navigationService = navigationService;
 
             Messenger.Register<HomeViewModel, UserSelectedMessage>(this, (r, m) => r.Receive(m));
+
+            BindCommands();
         }
 
         public ICommand PickPhotoCommand { get; set; }
         public ICommand TakePhotoCommand { get; set; }
-
-        public HomeViewModel()
-        {
-            BindCommands();
-        }
 
         private void BindCommands()
         {
