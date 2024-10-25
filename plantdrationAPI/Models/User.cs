@@ -3,10 +3,9 @@
     public class User
     {
         public int Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        // a user has multiple plants, add the navigation property
-        public List<Plant> Plants { get; set; }
+        public string Name { get; set; }
 
+        // A user has many plants, through the association table
+        public List<UserPlant> UserPlants { get; set; }
     }
 }
