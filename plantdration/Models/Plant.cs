@@ -18,6 +18,13 @@ namespace plantdration.Models
         private double minTemperature;
         private string photoUrl = string.Empty;
 
+        private string tag = string.Empty;
+        public string Tag
+        {
+            get => tag;
+            set => SetProperty(ref tag, value);
+        }
+
         public int Id
         {
             get => id;
@@ -88,22 +95,6 @@ namespace plantdration.Models
         {
             get => photoUrl;
             set => SetProperty(ref photoUrl, value);
-        }
-
-        public Plant(int id, string name, string species, int wateringFrequencyInDays, string sunlightRequirement, double heightInCentimeters, double growthRateInCmPerYear, DateTime lastWatered, bool isIndoorPlant, string soilType, double minTemperature, string photoUrl)
-        {
-            Id = id;
-            Name = name;
-            Species = species;
-            WateringFrequencyInDays = wateringFrequencyInDays;
-            SunlightRequirement = sunlightRequirement;
-            HeightInCentimeters = heightInCentimeters;
-            GrowthRateInCmPerYear = growthRateInCmPerYear;
-            LastWatered = lastWatered;
-            IsIndoorPlant = isIndoorPlant;
-            SoilType = soilType;
-            MinTemperature = minTemperature;
-            PhotoUrl = photoUrl;
         }
     }
 }

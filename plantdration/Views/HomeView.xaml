@@ -17,10 +17,8 @@
 
             <HorizontalStackLayout Spacing="5"
 				HorizontalOptions="Center">
-                <Button BackgroundColor="ForestGreen" TextColor="White" Command="{Binding PickPhotoCommand}" HorizontalOptions="Start"
-					Text="Pick a picture" />
-                <Button BackgroundColor="ForestGreen" TextColor="White" Command="{Binding TakePhotoCommand}" HorizontalOptions="End"
-					Text="Take a picture" />
+                <Button BackgroundColor="ForestGreen" TextColor="White" Command="{Binding AddPlantCommand}" HorizontalOptions="Start"
+					Text="Add Plant" />
             </HorizontalStackLayout>
             
             
