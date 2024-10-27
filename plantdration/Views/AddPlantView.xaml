@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="plantdration.Views.AddPlantView"
+             xmlns:viewModels="clr-namespace:plantdration.ViewModels"
+             x:DataType="viewModels:IAddPlantViewModel"
+             Shell.TitleColor="White"
+             Shell.BackgroundColor="ForestGreen"
+             Title="Add Plant">
+
+    <ScrollView BackgroundColor="LimeGreen">
+        <StackLayout Padding="30" Spacing="15">
+
+            <!-- Take/Select Photo Buttons -->
+            <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
+                <Button BackgroundColor="ForestGreen" TextColor="White" Command="{Binding TakePhotoCommand}" 
+            Text="Take Photo" />
+                <Button BackgroundColor="ForestGreen" TextColor="White" Command="{Binding PickPhotoCommand}" 
+            Text="Pick Photo" />
+            </HorizontalStackLayout>
+
+            <Image Source="{Binding Photo}"	Aspect="AspectFill"
+				HeightRequest="300"	WidthRequest="300" />
+
+            <!-- Plant Name -->
+            <Label Text="Name:" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.Name}" FontSize="Medium"/>
+
+            <!-- Species -->
+            <Label Text="Species:" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.Species}" FontSize="Medium"/>
+
+            <!-- Watering Frequency -->
+            <Label Text="Watering Frequency (days):" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.WateringFrequencyInDays}" FontSize="Medium"/>
+
+            <!-- Sunlight Requirement -->
+            <Label Text="Sunlight Requirement:" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.SunlightRequirement}" FontSize="Medium"/>
+
+            <!-- Height in Centimeters -->
+            <Label Text="Height (cm):" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.HeightInCentimeters}" FontSize="Medium"/>
+
+            <!-- Growth Rate in cm/year -->
+            <Label Text="Growth Rate (cm/year):" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.GrowthRateInCmPerYear}" FontSize="Medium"/>
+
+            <!-- Last Watered Date -->
+            <Label Text="Last Watered:" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.LastWatered}" FontSize="Medium"/>
+
+            <!-- Indoor Plant -->
+            <Label Text="Is Indoor Plant:" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.IsIndoorPlant}" FontSize="Medium"/>
+
+            <!-- Soil Type -->
+            <Label Text="Soil Type:" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.SoilType}" FontSize="Medium"/>
+
+            <!-- Minimum Temperature -->
+            <Label Text="Minimum Temperature (°C):" FontAttributes="Bold"/>
+            <Label Text="{Binding ClassifiedPlant.MinTemperature}" FontSize="Medium"/>
+            
+            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Add Plant" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

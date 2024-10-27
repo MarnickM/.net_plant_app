@@ -11,9 +11,7 @@ namespace plantdration.ViewModels
     public interface IHomeViewModel
     {
         User User { get; set; }
-
-        ICommand PickPhotoCommand { get; set; }
-        ICommand TakePhotoCommand { get; set; }
+        ICommand AddPlantCommand {  get; set; }
 
     }
 }

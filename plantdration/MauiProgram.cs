@@ -33,6 +33,9 @@ namespace plantdration
             builder.Services.AddTransient<HomeView>();
             builder.Services.AddTransient<IHomeViewModel, HomeViewModel>();
 
+            builder.Services.AddTransient<AddPlantView>();
+            builder.Services.AddTransient<IAddPlantViewModel, AddPlantViewModel>();
+
             return builder.Build();
         }
     }

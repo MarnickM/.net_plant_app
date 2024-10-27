@@ -40,25 +40,17 @@ namespace plantdration.ViewModels
             BindCommands();
         }
 
-        public ICommand PickPhotoCommand { get; set; }
-        public ICommand TakePhotoCommand { get; set; }
+        public ICommand AddPlantCommand { get; set; }
 
         private void BindCommands()
         {
-            PickPhotoCommand = new AsyncRelayCommand(PickAndClassifyPhoto);
-            TakePhotoCommand = new AsyncRelayCommand(TakeAndClassifyPhoto);
+            AddPlantCommand = new AsyncRelayCommand(GoToAddPlant);
         }
 
-        private async Task PickAndClassifyPhoto()
+        private async Task GoToAddPlant()
         {
-            var photo = await MediaPicker.Default.PickPhotoAsync();
-            /*await ClassifyPhotoAsync(photo);*/
-        }
-
-        private async Task TakeAndClassifyPhoto()
-        {
-            var photo = await MediaPicker.Default.CapturePhotoAsync();
-            /*await ClassifyPhotoAsync(photo);*/
+            await _navigationService.NavigateToAddPlantPageAsync();
+            WeakReferenceMessenger.Default.Send(new UserSelectedMessage(user));
         }
     }
 }
