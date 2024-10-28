@@ -18,7 +18,7 @@ namespace PlantdrationAPI.Controllers
 
         // GET: api/users
         [HttpGet]
-        public async Task<ActionResult> GetAllUsers()
+        public async Task<ActionResult<IEnumerable<User>>> GetAllUsers()
         {
             var users = await _userRepository.GetAll();
             return Ok(users);
@@ -26,7 +26,7 @@ namespace PlantdrationAPI.Controllers
 
         // GET: api/users/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult> GetUserById(int id)
+        public async Task<ActionResult<User>> GetUserById(int id)
         {
             var user = await _userRepository.GetByID(id);
             if (user == null)
@@ -50,7 +50,7 @@ namespace PlantdrationAPI.Controllers
 
         // POST: api/users
         [HttpPost]
-        public async Task<ActionResult> CreateUser(User user)
+        public async Task<ActionResult<User>> CreateUser(User user)
         {
             if (user == null)
             {

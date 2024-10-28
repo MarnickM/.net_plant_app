@@ -58,11 +58,13 @@ namespace plantdration.ViewModels
 
         public ICommand PickPhotoCommand { get; set; }
         public ICommand TakePhotoCommand { get; set; }
+        public ICommand AddPlantCommand { get; set; }
 
         private void BindCommands()
         {
             PickPhotoCommand = new AsyncRelayCommand(PickAndClassifyPhoto);
             TakePhotoCommand = new AsyncRelayCommand(TakeAndClassifyPhoto);
+            AddPlantCommand = new AsyncRelayCommand(AddPlantToCollection);
         }
 
         private async Task PickAndClassifyPhoto()
@@ -103,5 +105,24 @@ namespace plantdration.ViewModels
                 }
             }
         }
+
+        private async Task AddPlantToCollection()
+        {
+            if (ClassifiedPlant != null)
+            {
+                var userPlant = new UserPlant
+                {
+                    UserId = User.Id,
+                    PlantId = ClassifiedPlant.Id,
+                    DateAssigned = DateTime.Now
+                };
+
+                UserPlantDataService.AddUserPlant(userPlant);
+                WeakReferenceMessenger.Default.Send(new RefreshPlantsMessage());
+
+                await _navigationService.NavigateToHomePageAsync();
+            }
+        }
+
     }
 }

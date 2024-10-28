@@ -13,6 +13,7 @@ namespace plantdration.ViewModels
         User User { get; set; }
         ICommand PickPhotoCommand { get; set; }
         ICommand TakePhotoCommand { get; set; }
+        ICommand AddPlantCommand { get; set; }
 
         Plant ClassifiedPlant { get; set; }
 
