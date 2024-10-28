@@ -1,6 +1,7 @@
 ﻿using plantdration.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace plantdration.ViewModels
     {
         User User { get; set; }
         ICommand AddPlantCommand {  get; set; }
+        ObservableCollection<Plant> Plants { get; set; }
 
     }
 }

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="plantdration.Views.HomeView"
              xmlns:viewModels="clr-namespace:plantdration.ViewModels"
+             xmlns:models="clr-namespace:plantdration.Models"
              x:DataType="viewModels:IHomeViewModel"
              Shell.TitleColor="White"
              Shell.BackgroundColor="ForestGreen"
@@ -10,18 +11,35 @@
 
     <ScrollView BackgroundColor="LimeGreen">
         <StackLayout Padding="30">
+            <!-- Display User's Name -->
             <Label Text="{Binding User.Name}"
-                 FontSize="Medium"
-                 HorizontalOptions="Center"
-                 Margin="0,10,0,0"/>
+                   FontSize="Medium"
+                   HorizontalOptions="Center"
+                   Margin="0,10,0,0"/>
 
-            <HorizontalStackLayout Spacing="5"
-				HorizontalOptions="Center">
-                <Button BackgroundColor="ForestGreen" TextColor="White" Command="{Binding AddPlantCommand}" HorizontalOptions="Start"
-					Text="Add Plant" />
+            <!-- Add Plant Button -->
+            <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
+                <Button BackgroundColor="ForestGreen" TextColor="White" 
+                        Command="{Binding AddPlantCommand}" 
+                        HorizontalOptions="Start"
+                        Text="Add Plant" />
             </HorizontalStackLayout>
-            
-            
+
+            <!-- Collection of Plants -->
+            <CollectionView ItemsSource="{Binding Plants}" Margin="0,20,0,0">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Plant">
+                        <Frame BorderColor="DarkGreen" BackgroundColor="White" CornerRadius="8" Padding="10" Margin="10">
+                            <StackLayout>
+                                <Image Source="{Binding PhotoUrl}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large" TextColor="DarkGreen" />
+                                <Label Text="{Binding Species}" FontSize="Medium" TextColor="Gray" />
+                                <Label Text="{Binding SunlightRequirement}" FontSize="Small" TextColor="Gray" />
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ScrollView>
 

@@ -18,7 +18,7 @@ namespace PlantdrationAPI.Controllers
 
         // GET: api/plants
         [HttpGet]
-        public async Task<ActionResult> GetAllPlants()
+        public async Task<ActionResult<IEnumerable<Plant>>> GetAllPlants()
         {
             var plants = await _plantRepository.GetAll();
             return Ok(plants);
@@ -26,7 +26,7 @@ namespace PlantdrationAPI.Controllers
 
         // GET: api/plants/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult> GetPlantById(int id)
+        public async Task<ActionResult<Plant>> GetPlantById(int id)
         {
             var plant = await _plantRepository.GetByID(id);
             if (plant == null)
@@ -51,7 +51,7 @@ namespace PlantdrationAPI.Controllers
 
         // POST: api/plants
         [HttpPost]
-        public async Task<ActionResult> CreatePlant(Plant plant)
+        public async Task<ActionResult<Plant>> CreatePlant(Plant plant)
         {
             if (plant == null)
             {

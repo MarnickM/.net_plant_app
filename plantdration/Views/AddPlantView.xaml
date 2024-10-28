@@ -61,8 +61,9 @@
             <!-- Minimum Temperature -->
             <Label Text="Minimum Temperature (°C):" FontAttributes="Bold"/>
             <Label Text="{Binding ClassifiedPlant.MinTemperature}" FontSize="Medium"/>
-            
-            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Add Plant" />
+
+            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Add Plant" Command="{Binding AddPlantCommand}" />
+
 
         </StackLayout>
     </ScrollView>
