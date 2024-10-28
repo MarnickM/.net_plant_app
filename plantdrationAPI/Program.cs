@@ -34,7 +34,6 @@ using (var scope = app.Services.CreateScope())
     DBInitializer.Initialize(myContext);
 }
 
-app.Run();
 
 
 app.UseHttpsRedirection();
