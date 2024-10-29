@@ -22,18 +22,14 @@ namespace plantdration.ViewModels
             LoadUserPlants();
         }
 
-
         private User user = new User();
         public User User
         {
             get => user;
-            set
-            {
-                SetProperty(ref user, value);
-            }
+            set => SetProperty(ref user, value);
         }
 
-/*        private ObservableCollection<Plant> plants = new ObservableCollection<Plant>();
+        /*        private ObservableCollection<Plant> plants = new ObservableCollection<Plant>();
         public ObservableCollection<Plant> Plants
         {
             get => plants;
@@ -46,29 +42,26 @@ namespace plantdration.ViewModels
         public ObservableCollection<PlantCardViewModel> PlantCards { get; } = new ObservableCollection<PlantCardViewModel>();
 
         private INavigationService _navigationService;
-        public HomeViewModel(INavigationService navigationService)
+        public HomeViewModel(INavigationService navigationService, UserPlantDataService userPlantDataService)
         {
             _navigationService = navigationService;
+
+            _userPlantDataService = userPlantDataService;
 
             Messenger.Register<HomeViewModel, UserSelectedMessage>(this, (r, m) => r.Receive(m));
 
             BindCommands();
         }
 
+
+        private readonly UserPlantDataService _userPlantDataService;
+        
         public ICommand AddPlantCommand { get; set; }
-        /*public ICommand ShowDetailsCommand { get; set; }
-*/
+
         private void BindCommands()
         {
             AddPlantCommand = new AsyncRelayCommand(GoToAddPlant);
-            /*ShowDetailsCommand = new AsyncRelayCommand<UserPlant>(GoToPlantDetails);*/
         }
-
-/*        private async Task GoToPlantDetails(UserPlant selectedUserPLant)
-        {
-            await _navigationService.NavigateToPlantDetailsPageAsync();
-            WeakReferenceMessenger.Default.Send(new PlantSelectedMessage(selectedUserPLant));
-        }*/
 
         private async Task GoToAddPlant()
         {
@@ -76,37 +69,18 @@ namespace plantdration.ViewModels
             WeakReferenceMessenger.Default.Send(new UserSelectedMessage(user));
         }
 
-
-/*        private void LoadUserPlants()
+        private async Task LoadUserPlants()
         {
-            Plants.Clear();
-
-            var userPlants = UserPlantDataService.GetByUserId(User.Id);
-
-            foreach (var userPlant in userPlants)
-            {
-                var plant = PlantDataService.GetPlantById(userPlant.PlantId);
-                if (plant != null)
-                {
-                    Plants.Add(plant);
-                }
-            }
-        }*/
-
-        private void LoadUserPlants()
-        {
-            PlantCards.Clear();
-            var userPlants = UserPlantDataService.GetByUserId(User.Id);
-
-            foreach (var userPlant in userPlants)
-            {
-                var plant = PlantDataService.GetPlantById(userPlant.PlantId);
-                if (plant != null)
-                {
+           PlantCards.Clear();
+           var userPlants = await _userPlantDataService.GetByUserId(User.Id);
+           foreach (var userPlant in userPlants)
+           {
+              var plant = await PlantDataService.GetPlantById(userPlant.PlantId);
+              if (plant != null)
+              {
                     PlantCards.Add(new PlantCardViewModel(plant, userPlant, _navigationService));
-                }
-            }
+              }
+           }
         }
-
     }
 }

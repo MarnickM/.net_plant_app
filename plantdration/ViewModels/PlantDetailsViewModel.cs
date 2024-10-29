@@ -28,14 +28,14 @@ namespace plantdration.ViewModels
             set => SetProperty(ref selectedPlant, value);
         }
 
-        public void Receive(PlantSelectedMessage message)
+        public async void Receive(PlantSelectedMessage message)
         {
-            SelectedUserPlant = message.Value;/*
+            SelectedUserPlant = message.Value;
             Debug.WriteLine(SelectedUserPlant.PlantId);
-            Debug.WriteLine(SelectedUserPlant.UserId);*/
-            selectedPlant = PlantDataService.GetPlantById(SelectedUserPlant.PlantId);/*
+            Debug.WriteLine(SelectedUserPlant.UserId);
+            SelectedPlant = await PlantDataService.GetPlantById(SelectedUserPlant.PlantId);
             Debug.WriteLine(selectedPlant.Id);
-            Debug.WriteLine(selectedPlant.Name);*/
+            Debug.WriteLine(selectedPlant.Name);
         }
 
         private readonly INavigationService _navigationService;
@@ -61,7 +61,7 @@ namespace plantdration.ViewModels
         private void UpdateWateringDate()
         {
             SelectedUserPlant.LastWatered = DateTime.Now;
-            UserPlantDataService.UpdateUserPlant(SelectedUserPlant);
+            /*UserPlantDataService.UpdateUserPlant(SelectedUserPlant);*/
         }
 
 /*        private async Task SavePlantDetails()
@@ -72,10 +72,7 @@ namespace plantdration.ViewModels
 
         private async Task Back()
         {
-            /*API integreren en dan werkt dit*//*
-            User user = UserDataService.GetUserById(SelectedUserPlant.UserId);*/
-            await _navigationService.NavigateToHomePageAsync();
-            /*WeakReferenceMessenger.Default.Send(new UserSelectedMessage(user));*/
+            await _navigationService.NavigateBackAsync();
         }
     }
 }

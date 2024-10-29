@@ -100,7 +100,7 @@ namespace plantdration.ViewModels
                 }
                 else
                 {
-                    ClassifiedPlant = PlantDataService.GetPlantByTag(result.TagName)!;
+                    ClassifiedPlant = await PlantDataService.GetPlantByTag(result.TagName)!;
                     ClassifiedPlant.Name += " " + percent;
                 }
             }
@@ -117,7 +117,7 @@ namespace plantdration.ViewModels
                     DateAssigned = DateTime.Now
                 };
 
-                UserPlantDataService.AddUserPlant(userPlant);
+                /*UserPlantDataService.AddUserPlant(userPlant);*/
 
                 await _navigationService.NavigateToHomePageAsync();
                 WeakReferenceMessenger.Default.Send(new UserSelectedMessage(User));

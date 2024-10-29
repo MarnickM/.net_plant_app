@@ -8,7 +8,7 @@
 
        Task<T> GetByName(string name);
 
-       Task Insert(T obj);
+        Task Insert(T obj);
 
        void Delete(int id);
 

@@ -32,6 +32,7 @@ namespace plantdrationAPI
             var plant1 = new Plant
             {
                 Name = "Chrysant",
+                tag = "chrysant",
                 Species = "Chrysanthemum morifolium",
                 WateringFrequencyInDays = 7, // Weekly
                 SunlightRequirement = "Volle zon tot gedeeltelijke schaduw",
@@ -47,6 +48,7 @@ namespace plantdrationAPI
             var plant2 = new Plant
             {
                 Name = "Vetplant",
+                tag = "crassulamuscosa",
                 Species = "Crassula muscosa",
                 WateringFrequencyInDays = 14, // Biweekly
                 SunlightRequirement = "Volle zon tot gedeeltelijke schaduw",
@@ -62,6 +64,7 @@ namespace plantdrationAPI
             var plant3 = new Plant
             {
                 Name = "Kruipende Crassula",
+                tag = "crassulaperforata",
                 Species = "Crassula perforata",
                 WateringFrequencyInDays = 14,
                 SunlightRequirement = "Volle zon",
@@ -77,6 +80,7 @@ namespace plantdrationAPI
             var plant4 = new Plant
             {
                 Name = "Euphorbia",
+                tag = "euphorbianivulia",
                 Species = "Euphorbia nivulia",
                 WateringFrequencyInDays = 14,
                 SunlightRequirement = "Volle zon",
@@ -92,6 +96,7 @@ namespace plantdrationAPI
             var plant5 = new Plant
             {
                 Name = "Graslelie",
+                tag = "graslelie",
                 Species = "Chlorophytum comosum",
                 WateringFrequencyInDays = 7,
                 SunlightRequirement = "Indirecte zon",
@@ -107,6 +112,7 @@ namespace plantdrationAPI
             var plant6 = new Plant
             {
                 Name = "Orchidee",
+                tag = "orchidaceae",
                 Species = "Orchidaceae",
                 WateringFrequencyInDays = 7, // Every 7-10 days
                 SunlightRequirement = "Indirecte zon",
@@ -122,6 +128,7 @@ namespace plantdrationAPI
             var plant7 = new Plant
             {
                 Name = "Kamchatka Steenkruid",
+                tag = "phedimuskamtschaticus",
                 Species = "Phedimus kamtschaticus",
                 WateringFrequencyInDays = 21,
                 SunlightRequirement = "Volle zon",
@@ -137,6 +144,7 @@ namespace plantdrationAPI
             var plant8 = new Plant
             {
                 Name = "Hernandez' Steenkruid",
+                tag = "sedumhernandezii",
                 Species = "Sedum hernandezii",
                 WateringFrequencyInDays = 21,
                 SunlightRequirement = "Volle zon",
@@ -152,6 +160,7 @@ namespace plantdrationAPI
             var plant9 = new Plant
             {
                 Name = "Balcactus",
+                tag = "tephrocactusverschaffeltii",
                 Species = "Tephrocactus verschaffeltii",
                 WateringFrequencyInDays = 21,
                 SunlightRequirement = "Volle zon",
