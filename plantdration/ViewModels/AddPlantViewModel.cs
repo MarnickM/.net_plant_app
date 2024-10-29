@@ -118,9 +118,9 @@ namespace plantdration.ViewModels
                 };
 
                 UserPlantDataService.AddUserPlant(userPlant);
-                WeakReferenceMessenger.Default.Send(new RefreshPlantsMessage());
 
                 await _navigationService.NavigateToHomePageAsync();
+                WeakReferenceMessenger.Default.Send(new UserSelectedMessage(User));
             }
         }
 

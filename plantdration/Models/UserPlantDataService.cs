@@ -11,12 +11,12 @@ namespace plantdration.Models
         // Set userPlants to static
         private static readonly List<UserPlant> userPlants = new List<UserPlant>
     {
-        new UserPlant { Id = 1, UserId = 1, PlantId = 1, DateAssigned = DateTime.Now },
-        new UserPlant { Id = 2, UserId = 1, PlantId = 2, DateAssigned = DateTime.Now },
-        new UserPlant { Id = 3, UserId = 2, PlantId = 5, DateAssigned = DateTime.Now },
-        new UserPlant { Id = 4, UserId = 2, PlantId = 6, DateAssigned = DateTime.Now },
-        new UserPlant { Id = 5, UserId = 3, PlantId = 8, DateAssigned = DateTime.Now },
-        new UserPlant { Id = 6, UserId = 3, PlantId = 9, DateAssigned = DateTime.Now },
+        new UserPlant { Id = 1, UserId = 1, PlantId = 1, DateAssigned = DateTime.Now, LastWatered = DateTime.Now },
+        new UserPlant { Id = 2, UserId = 1, PlantId = 2, DateAssigned = DateTime.Now, LastWatered = DateTime.Now },
+        new UserPlant { Id = 3, UserId = 2, PlantId = 5, DateAssigned = DateTime.Now, LastWatered = DateTime.Now },
+        new UserPlant { Id = 4, UserId = 2, PlantId = 6, DateAssigned = DateTime.Now , LastWatered = DateTime.Now},
+        new UserPlant { Id = 5, UserId = 3, PlantId = 8, DateAssigned = DateTime.Now, LastWatered = DateTime.Now },
+        new UserPlant { Id = 6, UserId = 3, PlantId = 9, DateAssigned = DateTime.Now, LastWatered = DateTime.Now },
     };
 
         // Static method can now access static userPlants
@@ -39,10 +39,21 @@ namespace plantdration.Models
 
             // Set the current date/time when the plant is added
             userPlant.DateAssigned = DateTime.Now;
+            userPlant.LastWatered = DateTime.Now;
 
             // Add the new UserPlant to the static list
             userPlants.Add(userPlant);
         }
+
+        public static void UpdateUserPlant(UserPlant userPlant)
+        {
+            var existingUserPlant = userPlants.FirstOrDefault(up => up.Id == userPlant.Id);
+            if (existingUserPlant != null)
+            {
+                existingUserPlant.LastWatered = userPlant.LastWatered;
+            }
+        }
+
     }
 
 }

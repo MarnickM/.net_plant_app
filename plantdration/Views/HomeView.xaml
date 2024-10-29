@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="plantdration.Views.HomeView"
              xmlns:viewModels="clr-namespace:plantdration.ViewModels"
-             xmlns:models="clr-namespace:plantdration.Models"
              x:DataType="viewModels:IHomeViewModel"
              Shell.TitleColor="White"
              Shell.BackgroundColor="ForestGreen"
@@ -25,16 +24,20 @@
                         Text="Add Plant" />
             </HorizontalStackLayout>
 
-            <!-- Collection of Plants -->
-            <CollectionView ItemsSource="{Binding Plants}" Margin="0,20,0,0">
+            <!-- Collection of Plant Cards -->
+            <CollectionView ItemsSource="{Binding PlantCards}" Margin="0,20,0,0">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:Plant">
+                    <DataTemplate x:DataType="viewModels:PlantCardViewModel">
                         <Frame BorderColor="DarkGreen" BackgroundColor="White" CornerRadius="8" Padding="10" Margin="10">
                             <StackLayout>
-                                <Image Source="{Binding PhotoUrl}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
-                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large" TextColor="DarkGreen" />
-                                <Label Text="{Binding Species}" FontSize="Medium" TextColor="Gray" />
-                                <Label Text="{Binding SunlightRequirement}" FontSize="Small" TextColor="Gray" />
+                                <!--<Image Source="{Binding Plant.PhotoUrl}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />-->
+                                <Label Text="{Binding Plant.Name}" FontAttributes="Bold" FontSize="Large" TextColor="DarkGreen" />
+                                <Label Text="{Binding Plant.Species}" FontSize="Medium" TextColor="Gray" />
+                                <Label Text="{Binding Plant.SunlightRequirement}" FontSize="Small" TextColor="Gray" />
+                                <Button BackgroundColor="DarkGreen" TextColor="White" 
+                                        Command="{Binding ShowDetailsCommand}" 
+                                        HorizontalOptions="Start"
+                                        Text="Show Details" />
                             </StackLayout>
                         </Frame>
                     </DataTemplate>
@@ -42,5 +45,4 @@
             </CollectionView>
         </StackLayout>
     </ScrollView>
-
 </ContentPage>
