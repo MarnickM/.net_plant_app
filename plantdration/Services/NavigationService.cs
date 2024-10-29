@@ -38,6 +38,11 @@ namespace plantdration.Services
             await _navigation.PushAsync(_serviceProvider.GetRequiredService<AddPlantView>());
         }
 
+        public async Task NavigateToPlantDetailsPageAsync()
+        {
+            await _navigation.PushAsync(_serviceProvider.GetRequiredService<PlantDetailsView>());
+        }
+
         public async Task NavigateBackAsync()
         {
             if (_navigation.NavigationStack.Count > 1)

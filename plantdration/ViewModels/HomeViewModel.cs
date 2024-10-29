@@ -22,10 +22,6 @@ namespace plantdration.ViewModels
             LoadUserPlants();
         }
 
-        public void Receive(RefreshPlantsMessage message)
-        {
-            LoadUserPlants();
-        }
 
         private User user = new User();
         public User User
@@ -37,7 +33,7 @@ namespace plantdration.ViewModels
             }
         }
 
-        private ObservableCollection<Plant> plants = new ObservableCollection<Plant>();
+/*        private ObservableCollection<Plant> plants = new ObservableCollection<Plant>();
         public ObservableCollection<Plant> Plants
         {
             get => plants;
@@ -46,6 +42,8 @@ namespace plantdration.ViewModels
                 SetProperty(ref plants, value);
             }
         }
+*/
+        public ObservableCollection<PlantCardViewModel> PlantCards { get; } = new ObservableCollection<PlantCardViewModel>();
 
         private INavigationService _navigationService;
         public HomeViewModel(INavigationService navigationService)
@@ -53,17 +51,24 @@ namespace plantdration.ViewModels
             _navigationService = navigationService;
 
             Messenger.Register<HomeViewModel, UserSelectedMessage>(this, (r, m) => r.Receive(m));
-            Messenger.Register<HomeViewModel, RefreshPlantsMessage>(this, (r, m) => r.Receive(m));
 
             BindCommands();
         }
 
         public ICommand AddPlantCommand { get; set; }
-
+        /*public ICommand ShowDetailsCommand { get; set; }
+*/
         private void BindCommands()
         {
             AddPlantCommand = new AsyncRelayCommand(GoToAddPlant);
+            /*ShowDetailsCommand = new AsyncRelayCommand<UserPlant>(GoToPlantDetails);*/
         }
+
+/*        private async Task GoToPlantDetails(UserPlant selectedUserPLant)
+        {
+            await _navigationService.NavigateToPlantDetailsPageAsync();
+            WeakReferenceMessenger.Default.Send(new PlantSelectedMessage(selectedUserPLant));
+        }*/
 
         private async Task GoToAddPlant()
         {
@@ -72,7 +77,7 @@ namespace plantdration.ViewModels
         }
 
 
-        private void LoadUserPlants()
+/*        private void LoadUserPlants()
         {
             Plants.Clear();
 
@@ -84,6 +89,21 @@ namespace plantdration.ViewModels
                 if (plant != null)
                 {
                     Plants.Add(plant);
+                }
+            }
+        }*/
+
+        private void LoadUserPlants()
+        {
+            PlantCards.Clear();
+            var userPlants = UserPlantDataService.GetByUserId(User.Id);
+
+            foreach (var userPlant in userPlants)
+            {
+                var plant = PlantDataService.GetPlantById(userPlant.PlantId);
+                if (plant != null)
+                {
+                    PlantCards.Add(new PlantCardViewModel(plant, userPlant, _navigationService));
                 }
             }
         }

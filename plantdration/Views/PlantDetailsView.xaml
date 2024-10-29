@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:plantdration.ViewModels"
+             x:Class="plantdration.Views.PlantDetailsView"
+             x:DataType="viewModels:IPlantsDetailViewModel"
+             xmlns:models="clr-namespace:plantdration.Models"
+             Shell.TitleColor="White"
+             Shell.BackgroundColor="ForestGreen"
+             Title="Plant Details">
+
+    <StackLayout Padding="20">
+        <Label Text="{Binding SelectedPlant.Name}" FontSize="Large" FontAttributes="Bold"/>
+
+        <Label Text="Species:" FontAttributes="Bold"/>
+        <Label Text="{Binding SelectedPlant.Species}" FontSize="Medium"/>
+
+        <Label Text="Watering Frequency (days):" FontAttributes="Bold"/>
+        <Label Text="{Binding SelectedPlant.WateringFrequencyInDays}" FontSize="Medium"/>
+
+        <Label Text="Last Watered:" FontAttributes="Bold"/>
+        <Label Text="{Binding SelectedUserPlant.LastWatered, StringFormat='{}{0:MM/dd/yyyy}'}" FontSize="Medium"/>
+
+        <!-- Button to update LastWatered date -->
+        <Button Text="Watered Plant" 
+                Command="{Binding UpdateWateringDateCommand}" 
+                BackgroundColor="ForestGreen" 
+                TextColor="White" 
+                FontAttributes="Bold"
+                Margin="0,10,0,20"/>
+
+        <Button BackgroundColor="ForestGreen" TextColor="White" Text="Back"
+	            Command="{Binding CancelCommand}"
+	            Margin="0,5,0,0"/>
+    </StackLayout>
+</ContentPage>

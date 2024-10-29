@@ -13,7 +13,9 @@ namespace plantdration.ViewModels
     {
         User User { get; set; }
         ICommand AddPlantCommand {  get; set; }
-        ObservableCollection<Plant> Plants { get; set; }
+        ObservableCollection<PlantCardViewModel> PlantCards { get; }
+        /*ObservableCollection<Plant> Plants { get; set; }*/
+        /*ICommand ShowDetailsCommand { get; set; }*/
 
     }
 }

@@ -12,5 +12,6 @@ namespace plantdration.Services
         Task NavigateToHomePageAsync();
         Task NavigateBackAsync();
         Task NavigateToAddPlantPageAsync();
+        Task NavigateToPlantDetailsPageAsync();
     }
 }
