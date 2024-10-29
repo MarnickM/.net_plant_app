@@ -3,6 +3,7 @@
     public class Plant
     {
         public int Id { get; set; }
+        public string tag { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string Species { get; set; } = string.Empty;
         public int WateringFrequencyInDays { get; set; }

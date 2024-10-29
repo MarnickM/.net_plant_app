@@ -30,7 +30,7 @@ namespace PlantdrationAPI.DAL
 
         public async Task<Plant> GetByName(string name)
         {
-            return await _context.Plants.FirstOrDefaultAsync(p => p.Name.ToLower() == name.ToLower());
+            return await _context.Plants.FirstOrDefaultAsync(p => p.tag.ToLower() == name.ToLower());
         }
 
         public async Task Insert(Plant obj)

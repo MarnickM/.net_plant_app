@@ -18,6 +18,7 @@ builder.Services.AddDbContext<PlantContext>(options =>
 
 builder.Services.AddScoped<IRepository<User>, UserRepository>();
 builder.Services.AddScoped<IRepository<Plant>, PlantRepository>();
+builder.Services.AddScoped<UserPlantRepository>();
 
 var app = builder.Build();
 
