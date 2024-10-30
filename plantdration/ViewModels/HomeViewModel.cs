@@ -16,10 +16,10 @@ namespace plantdration.ViewModels
 {
     public class HomeViewModel : ObservableRecipient, IHomeViewModel, IRecipient<UserSelectedMessage>
     {
-        public void Receive(UserSelectedMessage message)
+        public async void Receive(UserSelectedMessage message)
         {
             User = message.Value;
-            LoadUserPlants();
+            await LoadUserPlants();
         }
 
         private User user = new User();
@@ -42,19 +42,15 @@ namespace plantdration.ViewModels
         public ObservableCollection<PlantCardViewModel> PlantCards { get; } = new ObservableCollection<PlantCardViewModel>();
 
         private INavigationService _navigationService;
-        public HomeViewModel(INavigationService navigationService, UserPlantDataService userPlantDataService)
+        public HomeViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
-
-            _userPlantDataService = userPlantDataService;
 
             Messenger.Register<HomeViewModel, UserSelectedMessage>(this, (r, m) => r.Receive(m));
 
             BindCommands();
         }
 
-
-        private readonly UserPlantDataService _userPlantDataService;
         
         public ICommand AddPlantCommand { get; set; }
 
@@ -72,7 +68,7 @@ namespace plantdration.ViewModels
         private async Task LoadUserPlants()
         {
            PlantCards.Clear();
-           var userPlants = await _userPlantDataService.GetByUserId(User.Id);
+           var userPlants = await UserPlantDataService.GetByUserId(User.Id);
            foreach (var userPlant in userPlants)
            {
               var plant = await PlantDataService.GetPlantById(userPlant.PlantId);

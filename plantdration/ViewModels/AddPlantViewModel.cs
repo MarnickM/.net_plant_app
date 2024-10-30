@@ -6,6 +6,7 @@ using plantdration.Models;
 using plantdration.Services;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -117,7 +118,8 @@ namespace plantdration.ViewModels
                     DateAssigned = DateTime.Now
                 };
 
-                /*UserPlantDataService.AddUserPlant(userPlant);*/
+                await UserPlantDataService.CreateUserPlant(userPlant);
+                Debug.WriteLine("UserPlant created");
 
                 await _navigationService.NavigateToHomePageAsync();
                 WeakReferenceMessenger.Default.Send(new UserSelectedMessage(User));

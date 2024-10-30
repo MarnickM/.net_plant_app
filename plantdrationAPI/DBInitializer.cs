@@ -38,7 +38,7 @@ namespace plantdrationAPI
                 SunlightRequirement = "Volle zon tot gedeeltelijke schaduw",
                 HeightInCentimeters = 60,
                 GrowthRateInCmPerYear = 20, // Example value, modify as needed
-                LastWatered = DateTime.Now,
+                /*LastWatered = DateTime.Now,*/
                 IsIndoorPlant = false,
                 SoilType = "Goed doorlatende grond",
                 MinTemperature = 15,
@@ -54,7 +54,7 @@ namespace plantdrationAPI
                 SunlightRequirement = "Volle zon tot gedeeltelijke schaduw",
                 HeightInCentimeters = 30,
                 GrowthRateInCmPerYear = 15, // Example value, modify as needed
-                LastWatered = DateTime.Now,
+                /*LastWatered = DateTime.Now,*/
                 IsIndoorPlant = true,
                 SoilType = "Cactusmix",
                 MinTemperature = 10,
@@ -70,7 +70,7 @@ namespace plantdrationAPI
                 SunlightRequirement = "Volle zon",
                 HeightInCentimeters = 30,
                 GrowthRateInCmPerYear = 15, // Example value, modify as needed
-                LastWatered = DateTime.Now,
+                /*LastWatered = DateTime.Now,*/
                 IsIndoorPlant = true,
                 SoilType = "Cactusmix",
                 MinTemperature = 10,
@@ -86,7 +86,7 @@ namespace plantdrationAPI
                 SunlightRequirement = "Volle zon",
                 HeightInCentimeters = 50,
                 GrowthRateInCmPerYear = 10, // Example value, modify as needed
-                LastWatered = DateTime.Now,
+                /*LastWatered = DateTime.Now,*/
                 IsIndoorPlant = false,
                 SoilType = "Zanderige, goed doorlatende grond",
                 MinTemperature = 10,
@@ -102,7 +102,7 @@ namespace plantdrationAPI
                 SunlightRequirement = "Indirecte zon",
                 HeightInCentimeters = 60,
                 GrowthRateInCmPerYear = 30, // Example value, modify as needed
-                LastWatered = DateTime.Now,
+                /*LastWatered = DateTime.Now,*/
                 IsIndoorPlant = true,
                 SoilType = "Goed doorlatende potgrond",
                 MinTemperature = 10,
@@ -118,7 +118,7 @@ namespace plantdrationAPI
                 SunlightRequirement = "Indirecte zon",
                 HeightInCentimeters = 60, // Varies widely
                 GrowthRateInCmPerYear = 5, // Example value, modify as needed
-                LastWatered = DateTime.Now,
+                /*LastWatered = DateTime.Now,*/
                 IsIndoorPlant = true,
                 SoilType = "Orchideemix (schors)",
                 MinTemperature = 20,
@@ -134,7 +134,7 @@ namespace plantdrationAPI
                 SunlightRequirement = "Volle zon",
                 HeightInCentimeters = 30,
                 GrowthRateInCmPerYear = 10, // Example value, modify as needed
-                LastWatered = DateTime.Now,
+                /*LastWatered = DateTime.Now,*/
                 IsIndoorPlant = false,
                 SoilType = "Goed doorlatende grond",
                 MinTemperature = 5,
@@ -150,7 +150,7 @@ namespace plantdrationAPI
                 SunlightRequirement = "Volle zon",
                 HeightInCentimeters = 15,
                 GrowthRateInCmPerYear = 5, // Example value, modify as needed
-                LastWatered = DateTime.Now,
+                /*LastWatered = DateTime.Now,*/
                 IsIndoorPlant = true,
                 SoilType = "Cactusmix",
                 MinTemperature = 10,
@@ -166,7 +166,7 @@ namespace plantdrationAPI
                 SunlightRequirement = "Volle zon",
                 HeightInCentimeters = 40,
                 GrowthRateInCmPerYear = 3, // Example value, modify as needed
-                LastWatered = DateTime.Now,
+                /*LastWatered = DateTime.Now,*/
                 IsIndoorPlant = false,
                 SoilType = "Cactusmix",
                 MinTemperature = 10,
@@ -181,25 +181,29 @@ namespace plantdrationAPI
             {
                 UserId = user1.Id,
                 PlantId = plant1.Id,
-                DateAssigned = DateTime.Now.AddDays(-30)
+                DateAssigned = DateTime.Now.AddDays(-30),
+                LastWatered = DateTime.Now.AddDays(-7)
             };
             var userPlant2 = new UserPlant
             {
                 UserId = user1.Id,
                 PlantId = plant2.Id,
-                DateAssigned = DateTime.Now.AddDays(-10)
+                DateAssigned = DateTime.Now.AddDays(-10),
+                LastWatered = DateTime.Now.AddDays(-14)
             };
             var userPlant3 = new UserPlant
             {
                 UserId = user2.Id,
                 PlantId = plant1.Id,
-                DateAssigned = DateTime.Now.AddDays(-20)
+                DateAssigned = DateTime.Now.AddDays(-20),
+                LastWatered = DateTime.Now.AddDays(-7)
             };
             var userPlant4 = new UserPlant
             {
                 UserId = user2.Id,
                 PlantId = plant3.Id,
-                DateAssigned = DateTime.Now.AddDays(-5)
+                DateAssigned = DateTime.Now.AddDays(-5),
+                LastWatered = DateTime.Now.AddDays(-14)
             };
 
             context.UserPlants.AddRange(userPlant1, userPlant2, userPlant3, userPlant4);

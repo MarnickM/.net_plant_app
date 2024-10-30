@@ -19,6 +19,11 @@ namespace PlantdrationAPI.DAL
                 .ToListAsync();
         }
 
+        public async Task<UserPlant> GetByUserIdAndPlantId(int userId, int plantId)
+        {
+            return await _context.UserPlants.FirstOrDefaultAsync(up => up.UserId == userId && up.PlantId == plantId);
+        }
+
         public async Task Insert(UserPlant obj)
         {
             await _context.UserPlants.AddAsync(obj);

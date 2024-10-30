@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Net.Http.Json;
 using System.Text.Json.Serialization;
 
@@ -48,7 +49,9 @@ namespace plantdration.Services
             try
             {
                 string url = BASE_URL + endPoint;
+                Debug.WriteLine(url);
                 var response = await client.PostAsJsonAsync(url, data);
+                Debug.WriteLine(response.StatusCode);
                 if (response.StatusCode != System.Net.HttpStatusCode.Created)
                 {
                     throw new Exception("Request failed with status code " + response.StatusCode);
