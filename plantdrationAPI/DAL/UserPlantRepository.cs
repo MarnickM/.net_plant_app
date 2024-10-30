@@ -39,5 +39,10 @@ namespace PlantdrationAPI.DAL
             _context.UserPlants.Update(obj);
             return obj;
         }
+
+        public void Delete(UserPlant obj)
+        {
+            _context.UserPlants.Remove(obj);
+        }
     }
 }

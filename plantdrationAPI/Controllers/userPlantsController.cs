@@ -67,5 +67,24 @@ namespace PlantdrationAPI.Controllers
             return Ok(existingUserPlant);
         }
 
+        // DELETE: api/userPlants/{userid}/{plantid}
+        [HttpDelete("{userid}/{plantid}")]
+        public async Task<IActionResult> DeleteUserPlant(int userid, int plantid)
+        {
+            // Fetch the existing UserPlant
+            var userPlant = await _userPlantRepository.GetByUserIdAndPlantId(userid, plantid);
+
+            if (userPlant == null)
+            {
+                return NotFound("UserPlant not found.");
+            }
+
+            _userPlantRepository.Delete(userPlant);
+            await _userPlantRepository.Save();
+
+            return Ok();
+        }
+
+
     }
 }

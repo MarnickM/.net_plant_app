@@ -59,6 +59,7 @@
             <Label Text="{Binding ClassifiedPlant.MinTemperature}" FontSize="Medium"/>
 
             <Button BackgroundColor="ForestGreen" TextColor="White" Text="Add Plant" Command="{Binding AddPlantCommand}" />
+            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Back" Command="{Binding GoBackCommand}" Margin="0,5,0,0"/>
 
 
         </StackLayout>

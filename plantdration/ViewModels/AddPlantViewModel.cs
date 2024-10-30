@@ -60,12 +60,14 @@ namespace plantdration.ViewModels
         public ICommand PickPhotoCommand { get; set; }
         public ICommand TakePhotoCommand { get; set; }
         public ICommand AddPlantCommand { get; set; }
+        public ICommand GoBackCommand { get; set; }
 
         private void BindCommands()
         {
             PickPhotoCommand = new AsyncRelayCommand(PickAndClassifyPhoto);
             TakePhotoCommand = new AsyncRelayCommand(TakeAndClassifyPhoto);
             AddPlantCommand = new AsyncRelayCommand(AddPlantToCollection);
+            GoBackCommand = new AsyncRelayCommand(GoBack);
         }
 
         private async Task PickAndClassifyPhoto()
@@ -124,6 +126,11 @@ namespace plantdration.ViewModels
                 await _navigationService.NavigateToHomePageAsync();
                 WeakReferenceMessenger.Default.Send(new UserSelectedMessage(User));
             }
+        }
+
+        private async Task GoBack()
+        {
+            await _navigationService.NavigateBackAsync();
         }
 
     }

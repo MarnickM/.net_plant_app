@@ -43,6 +43,11 @@ namespace plantdration.Services
             await _navigation.PushAsync(_serviceProvider.GetRequiredService<PlantDetailsView>());
         }
 
+        public async Task NavigateToUserPageAsync()
+        {
+            await _navigation.PushAsync(_serviceProvider.GetRequiredService<UserListView>());
+        }
+
         public async Task NavigateBackAsync()
         {
             if (_navigation.NavigationStack.Count > 1)
