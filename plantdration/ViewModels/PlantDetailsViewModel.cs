@@ -58,17 +58,17 @@ namespace plantdration.ViewModels
             UpdateWateringDateCommand = new RelayCommand(UpdateWateringDate);
         }
 
-        private void UpdateWateringDate()
+        private async void UpdateWateringDate()
         {
             SelectedUserPlant.LastWatered = DateTime.Now;
-            /*UserPlantDataService.UpdateUserPlant(SelectedUserPlant);*/
+            await UserPlantDataService.UpdateUserPlant(SelectedUserPlant);
         }
 
-/*        private async Task SavePlantDetails()
-        {
-            await _navigationService.NavigateToHomePageAsync();
-            UserPlantDataService.UpdateUserPlant(SelectedUserPlant);
-        }*/
+        /*        private async Task SavePlantDetails()
+                {
+                    await _navigationService.NavigateToHomePageAsync();
+                    UserPlantDataService.UpdateUserPlant(SelectedUserPlant);
+                }*/
 
         private async Task Back()
         {

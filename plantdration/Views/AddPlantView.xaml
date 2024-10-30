@@ -46,10 +46,6 @@
             <Label Text="Growth Rate (cm/year):" FontAttributes="Bold"/>
             <Label Text="{Binding ClassifiedPlant.GrowthRateInCmPerYear}" FontSize="Medium"/>
 
-            <!-- Last Watered Date -->
-            <Label Text="Last Watered:" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.LastWatered}" FontSize="Medium"/>
-
             <!-- Indoor Plant -->
             <Label Text="Is Indoor Plant:" FontAttributes="Bold"/>
             <Label Text="{Binding ClassifiedPlant.IsIndoorPlant}" FontSize="Medium"/>

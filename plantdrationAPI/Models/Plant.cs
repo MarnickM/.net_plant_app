@@ -10,7 +10,7 @@
         public string SunlightRequirement { get; set; } = string.Empty;
         public double HeightInCentimeters { get; set; }
         public double GrowthRateInCmPerYear { get; set; }
-        public DateTime LastWatered { get; set; }
+        /*public DateTime LastWatered { get; set; }*/
         public bool IsIndoorPlant { get; set; }
         public string SoilType { get; set; } = string.Empty;
         public double MinTemperature { get; set; }
