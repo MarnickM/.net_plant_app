@@ -22,6 +22,11 @@ namespace plantdration.ViewModels
             await LoadUserPlants();
         }
 
+        public async void Receive(RefreshPlantListMessage message)
+        {
+            await LoadUserPlants();
+        }
+
         private User user = new User();
         public User User
         {
@@ -47,16 +52,19 @@ namespace plantdration.ViewModels
             _navigationService = navigationService;
 
             Messenger.Register<HomeViewModel, UserSelectedMessage>(this, (r, m) => r.Receive(m));
+            Messenger.Register<HomeViewModel, RefreshPlantListMessage>(this, (r, m) => r.Receive(m));
 
             BindCommands();
         }
 
         
         public ICommand AddPlantCommand { get; set; }
+        public ICommand GoToUserPageCommand {  get; set; }
 
         private void BindCommands()
         {
             AddPlantCommand = new AsyncRelayCommand(GoToAddPlant);
+            GoToUserPageCommand = new AsyncRelayCommand(GoToUserPage);
         }
 
         private async Task GoToAddPlant()
@@ -77,6 +85,11 @@ namespace plantdration.ViewModels
                     PlantCards.Add(new PlantCardViewModel(plant, userPlant, _navigationService));
               }
            }
+        }
+
+        private async Task GoToUserPage()
+        {
+            await _navigationService.NavigateToUserPageAsync();
         }
     }
 }

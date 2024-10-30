@@ -38,5 +38,10 @@ namespace plantdration.Models
             await ApiService<UserPlant>.PutAsync(endPoint, userPlant);
         }
 
+        public async static Task DeleteUserPlant(UserPlant userPlant)
+        {
+            string endPoint = $"UserPlants/{userPlant.UserId}/{userPlant.PlantId}";
+            await ApiService<UserPlant>.DeleteAsync(endPoint);
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace plantdration.Services
         Task NavigateBackAsync();
         Task NavigateToAddPlantPageAsync();
         Task NavigateToPlantDetailsPageAsync();
+        Task NavigateToUserPageAsync();
     }
 }

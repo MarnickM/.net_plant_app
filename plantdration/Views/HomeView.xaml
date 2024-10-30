@@ -8,6 +8,10 @@
              Shell.BackgroundColor="ForestGreen"
              Title="Home">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Switch user" Command="{Binding GoToUserPageCommand}"/>
+    </ContentPage.ToolbarItems>
+
     <ScrollView BackgroundColor="LimeGreen">
         <StackLayout Padding="30">
             <!-- Display User's Name -->
@@ -38,6 +42,10 @@
                                         Command="{Binding ShowDetailsCommand}" 
                                         HorizontalOptions="Start"
                                         Text="Show Details" />
+                                <Button BackgroundColor="DarkGreen" TextColor="White" 
+                                        Command="{Binding DeletePlantFromUserCommand}" 
+                                        HorizontalOptions="Start"
+                                        Text="Delete" />
                             </StackLayout>
                         </Frame>
                     </DataTemplate>
