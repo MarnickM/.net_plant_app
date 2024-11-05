@@ -4,48 +4,75 @@
              x:Class="plantdration.Views.HomeView"
              xmlns:viewModels="clr-namespace:plantdration.ViewModels"
              x:DataType="viewModels:IHomeViewModel"
-             Shell.TitleColor="White"
-             Shell.BackgroundColor="ForestGreen"
-             Title="Home">
+             Title="Home"
+             BackgroundColor="{StaticResource BackgroundWhite}">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Switch user" Command="{Binding GoToUserPageCommand}"/>
     </ContentPage.ToolbarItems>
 
-    <ScrollView BackgroundColor="LimeGreen">
-        <StackLayout Padding="30">
+    <ScrollView BackgroundColor="{StaticResource LimeGreen}">
+        <StackLayout Padding="50" Margin="20">
             <!-- Display User's Name -->
             <Label Text="{Binding User.Name}"
                    FontSize="Medium"
                    HorizontalOptions="Center"
+                   TextColor="{StaticResource TextColor}"
                    Margin="0,10,0,0"/>
 
             <!-- Add Plant Button -->
-            <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
-                <Button BackgroundColor="ForestGreen" TextColor="White" 
-                        Command="{Binding AddPlantCommand}" 
-                        HorizontalOptions="Start"
-                        Text="Add Plant" />
-            </HorizontalStackLayout>
+            <Button Style="{StaticResource ButtonStyle}" 
+                    Command="{Binding AddPlantCommand}" 
+                    HorizontalOptions="Center"
+                    Text="Add Plant" 
+                    Margin="0,20"/>
 
             <!-- Collection of Plant Cards -->
-            <CollectionView ItemsSource="{Binding PlantCards}" Margin="0,20,0,0">
+            <CollectionView ItemsSource="{Binding PlantCards}" 
+                            Margin="50,50,50,50"
+                            BackgroundColor="{StaticResource BackgroundWhite}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="viewModels:PlantCardViewModel">
-                        <Frame BorderColor="DarkGreen" BackgroundColor="White" CornerRadius="8" Padding="10" Margin="10">
-                            <StackLayout>
-                                <!--<Image Source="{Binding Plant.PhotoUrl}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />-->
-                                <Label Text="{Binding Plant.Name}" FontAttributes="Bold" FontSize="Large" TextColor="DarkGreen" />
-                                <Label Text="{Binding Plant.Species}" FontSize="Medium" TextColor="Gray" />
-                                <Label Text="{Binding Plant.SunlightRequirement}" FontSize="Small" TextColor="Gray" />
-                                <Button BackgroundColor="DarkGreen" TextColor="White" 
+                        <Frame Style="{StaticResource FrameStyle}" 
+                               BackgroundColor="{StaticResource BackgroundWhite}">
+                            <StackLayout Padding="10">
+                                <Label Text="{Binding Plant.Name}" 
+                                       FontAttributes="Bold" 
+                                       FontSize="Large" 
+                                       TextColor="{StaticResource DarkGreen}" />
+                                <Label FontSize="Small" TextColor="Gray">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Plant.IsIndoorPlant}" Value="True">
+                                            <Setter Property="Text" Value="Indoor plant" />
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Label" Binding="{Binding Plant.IsIndoorPlant}" Value="False">
+                                            <Setter Property="Text" Value="Outdoor plant" />
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <Label Text="{Binding Plant.HeightInCentimeters, StringFormat='Max Height: {0} cm'}"
+                                       FontSize="Small" 
+                                       TextColor="Gray" />
+                                <Label Text="{Binding Plant.MinTemperature, StringFormat='Min Temp: {0}°C'}"
+                                       FontSize="Small" 
+                                       TextColor="Gray" />
+                                <Label Text="{Binding Plant.WateringFrequencyInDays, StringFormat='Watering frequency in days: {0}'}"
+                                        FontSize="Small" 
+                                        TextColor="Gray" />
+
+                                <!-- Show Details Button -->
+                                <Button Style="{StaticResource ButtonStyle}" 
                                         Command="{Binding ShowDetailsCommand}" 
-                                        HorizontalOptions="Start"
-                                        Text="Show Details" />
-                                <Button BackgroundColor="DarkGreen" TextColor="White" 
+                                        HorizontalOptions="Center"
+                                        Text="Details"
+                                        Margin="0,5"/>
+
+                                    <!-- Delete Button -->
+                                    <Button Style="{StaticResource ButtonStyle}" 
                                         Command="{Binding DeletePlantFromUserCommand}" 
-                                        HorizontalOptions="Start"
-                                        Text="Delete" />
+                                        HorizontalOptions="Center"
+                                        Text="Delete" 
+                                        Margin="0,5"/>
                             </StackLayout>
                         </Frame>
                     </DataTemplate>

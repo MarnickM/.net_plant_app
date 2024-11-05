@@ -10,4 +10,6 @@ public partial class DetailsView : ContentPage
 
         BindingContext = viewModel;
     }
+
+
 }

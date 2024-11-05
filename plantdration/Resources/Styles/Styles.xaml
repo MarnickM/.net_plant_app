@@ -4,6 +4,99 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
+
+    <!-- Page Background -->
+    <Style TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundWhite}"/>
+    </Style>
+
+    <!-- CollectionView Style -->
+    <Style TargetType="CollectionView" x:Key="CollectionViewStyle">
+        <Setter Property="Margin" Value="10,0" />
+        <Setter Property="BackgroundColor" Value="{StaticResource BackgroundWhite}"/>
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style TargetType="Frame" x:Key="UserFrameStyle">
+        <Setter Property="HasShadow" Value="True"/>
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource PrimaryGreen}"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="BorderColor" Value="Transparent"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="MaximumWidthRequest" Value="300"/>
+        <!-- Set a maximum width -->
+
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{StaticResource PrimaryGreen}"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="{StaticResource PrimaryGreenDark}"/>
+                            <Setter Property="HasShadow" Value="True"/>
+                            <Setter Property="Scale" Value="0.98"/>
+                            <!-- Simulates a press effect -->
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+    <!-- Frame Style -->
+    <Style x:Key="FrameStyle" TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BorderColor" Value="{StaticResource DarkGreen}" />
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Margin" Value="5" />
+        <!-- General margin for spacing -->
+    </Style>
+
+    <!-- Button Style -->
+    <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource DarkGreen}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="WidthRequest" Value="150" />
+        <!-- Fixed width, can be adjusted -->
+    </Style>
+
+    <!-- Style for Plant Details Buttons -->
+    <Style x:Key="PlantDetailsButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{StaticResource DarkGreen}" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+        <!-- Aligns button to the left -->
+    </Style>
+
+
+    <!-- Label Style for User Names -->
+    <Style TargetType="Label" x:Key="UserNameLabelStyle">
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="TextColor" Value="{StaticResource TextLight}"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+
+    <!-- Empty View Label Style -->
+    <Style TargetType="Label" x:Key="EmptyViewLabelStyle">
+        <Setter Property="TextColor" Value="{StaticResource PrimaryGreen}"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+    </Style>
+
+
     <Style TargetType="ActivityIndicator">
         <Setter Property="Color" Value="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource White}}" />
     </Style>

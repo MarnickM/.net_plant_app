@@ -2,33 +2,66 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="plantdration.Views.DetailsView"
-             
              xmlns:viewModels="clr-namespace:plantdration.ViewModels"
-			 x:DataType="viewModels:IDetailsViewModel"
-             Shell.TitleColor="White"
-             Shell.BackgroundColor="ForestGreen"
-             Title="User">
+             x:DataType="viewModels:IDetailsViewModel"
+             Title="User"
+             BackgroundColor="{StaticResource BackgroundWhite}">
 
-    <ScrollView BackgroundColor="LimeGreen">
+    <ScrollView BackgroundColor="{StaticResource BackgroundWhite}">
         <StackLayout Padding="30">
 
             <Label Text="Name"
-               FontSize="Medium"
-               Margin="0,10,0,0"/>
-            <Entry BackgroundColor="DarkGreen" TextColor="White" Text="{Binding User.Name}"
-               Placeholder="Enter your name"/>
+                   FontSize="Medium"
+                   TextColor="{StaticResource TextColor}"
+                   Margin="0,10,0,0"/>
 
-            <Button BackgroundColor="ForestGreen" TextColor="White" Text="{Binding SaveText}"
-				Command="{Binding SaveCommand}"
-                Margin="0,20,0,0"/>
-            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Delete"
-				Command="{Binding DeleteCommand}"
-				IsVisible="{Binding CanDelete}"
-				Margin="0,5,0,0"/>
-            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Cancel"
-				Command="{Binding CancelCommand}"
-				Margin="0,5,0,0"/>
+            <!-- Wrapper for Entry to customize the border -->
+            <Frame BackgroundColor="Transparent" 
+                   BorderColor="{StaticResource PrimaryGreen}" 
+                   CornerRadius="5"
+                   Margin="0,0,0,20"
+                   HasShadow="False">
+                <Entry BackgroundColor="#F0F0F0"
+                        TextColor="{StaticResource TextColor}"
+                        Text="{Binding User.Name}"
+                        Placeholder="Enter your name"
+                        Margin="0"/>
+            </Frame>
+
+            <!-- Save Button -->
+            <Button Text="{Binding SaveText}"
+                    Command="{Binding SaveCommand}"
+                    BackgroundColor="{StaticResource PrimaryGreen}"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Margin="0,5"
+                    HeightRequest="50"/>
+
+            <!-- Delete Button -->
+            <Button Text="Delete"
+                    Command="{Binding DeleteCommand}"
+                    IsVisible="{Binding CanDelete}"
+                    BackgroundColor="{StaticResource PrimaryGreen}"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Margin="0,5"
+                    HeightRequest="50"/>
+
+            <!-- Cancel Button -->
+            <Button Text="Cancel"
+                    Command="{Binding CancelCommand}"
+                    BackgroundColor="{StaticResource PrimaryGreen}"
+                    TextColor="White"
+                    CornerRadius="10"
+                    WidthRequest="150"
+                    HorizontalOptions="Center"
+                    Margin="0,5"
+                    HeightRequest="50"/>
+
         </StackLayout>
     </ScrollView>
-
 </ContentPage>

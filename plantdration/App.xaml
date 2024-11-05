@@ -9,6 +9,13 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Shell Styling for Toolbar Background and Title Colors -->
+            <Style TargetType="Shell">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryGreen}"/>
+                <Setter Property="TitleColor" Value="{StaticResource TextLight}"/>
+                <Setter Property="ForegroundColor" Value="{StaticResource TextLight}"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
