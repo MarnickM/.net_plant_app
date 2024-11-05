@@ -3,55 +3,15 @@
   "WorkspaceRootPath": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|d:\\school\\net adv\\projects\\.net_plant_app\\plantdrationapi\\controllers\\userplantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:controllers\\userplantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\dal\\userplantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\userplantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/plantdrationAPI/True/SqlTable/dbo.UserPlant.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\models\\userplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\userplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|d:\\school\\net adv\\projects\\.net_plant_app\\plantdrationapi\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\models\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\dal\\plantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\plantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\dal\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\controllers\\plantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:controllers\\plantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|d:\\school\\net adv\\projects\\.net_plant_app\\plantdrationapi\\models\\userplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\userplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,163 +21,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "dbo.UserPlant [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/plantdrationAPI/True/SqlTable/dbo.UserPlant.sql",
               "ToolTip": "dbo.UserPlant [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-10-30T15:21:50.211Z",
+              "WhenOpened": "2024-11-05T18:25:44.623Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "User.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:51:11.531Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UserPlantRepository.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DAL\\UserPlantRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\UserPlantRepository.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DAL\\UserPlantRepository.cs",
-              "RelativeToolTip": "DAL\\UserPlantRepository.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAYwCgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:16:51.012Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "userPlantsController.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Controllers\\userPlantsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\userPlantsController.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Controllers\\userPlantsController.cs",
-              "RelativeToolTip": "Controllers\\userPlantsController.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAiwFIAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:16:37.723Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserPlant.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Models\\UserPlant.cs",
-              "RelativeDocumentMoniker": "Models\\UserPlant.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Models\\UserPlant.cs",
-              "RelativeToolTip": "Models\\UserPlant.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T09:47:38.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Plant.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Models\\Plant.cs",
-              "RelativeDocumentMoniker": "Models\\Plant.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Models\\Plant.cs",
-              "RelativeToolTip": "Models\\Plant.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T09:47:32.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DAL\\UserRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\UserRepository.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DAL\\UserRepository.cs",
-              "RelativeToolTip": "DAL\\UserRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:15:49.282Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "DBInitializer.cs",
               "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DBInitializer.cs",
               "RelativeDocumentMoniker": "DBInitializer.cs",
               "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DBInitializer.cs",
               "RelativeToolTip": "DBInitializer.cs",
-              "ViewState": "AQIAAIgAAAAAAAAAAAAAAKMAAAA4AAAA",
+              "ViewState": "AQIAAKwAAAAAAAAAAAAgwNEAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:42:52.182Z"
+              "WhenOpened": "2024-11-05T18:09:51.035Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "usersController.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Controllers\\usersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\usersController.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Controllers\\usersController.cs",
-              "RelativeToolTip": "Controllers\\usersController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAFQAAAAhAAAA",
+              "DocumentIndex": 2,
+              "Title": "UserPlant.cs",
+              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Models\\UserPlant.cs",
+              "RelativeDocumentMoniker": "Models\\UserPlant.cs",
+              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Models\\UserPlant.cs",
+              "RelativeToolTip": "Models\\UserPlant.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:16:52.617Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DAL\\IRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepository.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DAL\\IRepository.cs",
-              "RelativeToolTip": "DAL\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:24:49.934Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PlantRepository.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DAL\\PlantRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\PlantRepository.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\DAL\\PlantRepository.cs",
-              "RelativeToolTip": "DAL\\PlantRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAkwCIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:24:52.076Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAswBQAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:43:53.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "plantsController.cs",
-              "DocumentMoniker": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Controllers\\plantsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\plantsController.cs",
-              "ToolTip": "D:\\School\\NET Adv\\Projects\\.net_plant_app\\plantdrationAPI\\Controllers\\plantsController.cs",
-              "RelativeToolTip": "Controllers\\plantsController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAgwGUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T09:51:29.717Z"
+              "WhenOpened": "2024-11-05T18:08:37.106Z",
+              "EditorCaption": ""
             }
           ]
         }

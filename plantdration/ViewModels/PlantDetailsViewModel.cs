@@ -13,7 +13,6 @@ namespace plantdration.ViewModels
 {
     public class PlantDetailsViewModel : ObservableRecipient, IPlantsDetailViewModel, IRecipient<PlantSelectedMessage>
     { 
-
         private UserPlant selectedUserPlant;
         public UserPlant SelectedUserPlant
         {

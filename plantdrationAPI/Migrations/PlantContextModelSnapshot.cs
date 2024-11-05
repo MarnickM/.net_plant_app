@@ -38,9 +38,6 @@ namespace plantdrationAPI.Migrations
                     b.Property<bool>("IsIndoorPlant")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("LastWatered")
-                        .HasColumnType("datetime2");
-
                     b.Property<double>("MinTemperature")
                         .HasColumnType("float");
 
@@ -103,6 +100,13 @@ namespace plantdrationAPI.Migrations
 
                     b.Property<DateTime>("DateAssigned")
                         .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("LastWatered")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PhotoPath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId", "PlantId");
 

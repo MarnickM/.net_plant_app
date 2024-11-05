@@ -82,6 +82,14 @@ namespace plantdration.ViewModels
             await ClassifyPhotoAsync(photo);
         }
 
+        private string photoPath;
+        public string PhotoPath
+        {
+            get => photoPath;
+            set => SetProperty(ref photoPath, value);
+        }
+
+
         private async Task ClassifyPhotoAsync(FileResult photo)
         {
             if (photo is { })
@@ -90,7 +98,25 @@ namespace plantdration.ViewModels
 
                 // Resize to allowed size - 4MB
                 var resizedPhoto = await PhotoImageService.ResizePhotoStreamAsync(photo);
-                Photo = ImageSource.FromStream(() => new MemoryStream(resizedPhoto));
+
+                // Convert resized photo to byte array
+                byte[] photoBytes;
+                using (var ms = new MemoryStream())
+                {
+                    await ms.WriteAsync(resizedPhoto, 0, resizedPhoto.Length);
+                    photoBytes = ms.ToArray();
+                }
+
+                photoPath = Path.Combine(FileSystem.AppDataDirectory, $"{Guid.NewGuid()}.jpg");
+
+                File.WriteAllBytes(photoPath, photoBytes);
+
+                Debug.WriteLine("AppData Directory: " + FileSystem.AppDataDirectory);
+
+
+                Photo = ImageSource.FromFile(photoPath);
+
+
 
                 // Custom Vision API call
                 var result = await CustomVisionService.ClassifyImageAsync(new MemoryStream(resizedPhoto));
@@ -117,7 +143,8 @@ namespace plantdration.ViewModels
                 {
                     UserId = User.Id,
                     PlantId = ClassifiedPlant.Id,
-                    DateAssigned = DateTime.Now
+                    DateAssigned = DateTime.Now,
+                    PhotoPath = photoPath
                 };
 
                 await UserPlantDataService.CreateUserPlant(userPlant);

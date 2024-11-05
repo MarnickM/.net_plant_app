@@ -182,28 +182,32 @@ namespace plantdrationAPI
                 UserId = user1.Id,
                 PlantId = plant1.Id,
                 DateAssigned = DateTime.Now.AddDays(-30),
-                LastWatered = DateTime.Now.AddDays(-7)
+                LastWatered = DateTime.Now.AddDays(-7),
+                PhotoPath = ""
             };
             var userPlant2 = new UserPlant
             {
                 UserId = user1.Id,
                 PlantId = plant2.Id,
                 DateAssigned = DateTime.Now.AddDays(-10),
-                LastWatered = DateTime.Now.AddDays(-14)
+                LastWatered = DateTime.Now.AddDays(-14),
+                PhotoPath = ""
             };
             var userPlant3 = new UserPlant
             {
                 UserId = user2.Id,
                 PlantId = plant1.Id,
                 DateAssigned = DateTime.Now.AddDays(-20),
-                LastWatered = DateTime.Now.AddDays(-7)
+                LastWatered = DateTime.Now.AddDays(-7),
+                PhotoPath = ""
             };
             var userPlant4 = new UserPlant
             {
                 UserId = user2.Id,
                 PlantId = plant3.Id,
                 DateAssigned = DateTime.Now.AddDays(-5),
-                LastWatered = DateTime.Now.AddDays(-14)
+                LastWatered = DateTime.Now.AddDays(-14),
+                PhotoPath = ""
             };
 
             context.UserPlants.AddRange(userPlant1, userPlant2, userPlant3, userPlant4);

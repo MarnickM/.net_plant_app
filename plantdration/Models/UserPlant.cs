@@ -14,6 +14,7 @@ namespace plantdration.Models
         private int plantId;
         private DateTime dateAssigned;
         public DateTime lastWatered;
+        public string photoPath;
 
         public int Id
         {
@@ -43,6 +44,12 @@ namespace plantdration.Models
         {
             get => lastWatered;
             set => SetProperty(ref lastWatered, value);
+        }
+
+        public string PhotoPath
+        {
+            get => photoPath;
+            set => SetProperty(ref photoPath, value);
         }
 
     }

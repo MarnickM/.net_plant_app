@@ -12,7 +12,6 @@ namespace plantdration.ViewModels
     {
         public Plant Plant { get; }
         public UserPlant UserPlant { get; }
-
         public ICommand ShowDetailsCommand { get; }
         public ICommand DeletePlantFromUserCommand { get; }
 

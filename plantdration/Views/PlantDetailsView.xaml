@@ -10,6 +10,7 @@
              Title="Plant Details">
 
     <StackLayout Padding="20">
+        <Image Source="{Binding SelectedUserPlant.PhotoPath}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
         <Label Text="{Binding SelectedPlant.Name}" FontSize="Large" FontAttributes="Bold"/>
 
         <Label Text="Species:" FontAttributes="Bold"/>
