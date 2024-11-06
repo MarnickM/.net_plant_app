@@ -9,5 +9,6 @@
         public Plant? Plant { get; set; }
         public DateTime DateAssigned { get; set; }
         public DateTime LastWatered { get; set; }
+        public string PhotoPath { get; set; }
     }
 }
