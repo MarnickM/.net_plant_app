@@ -2,56 +2,106 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:plantdration.ViewModels"
+             xmlns:converters="clr-namespace:plantDration.Converters"
              x:Class="plantdration.Views.PlantDetailsView"
              x:DataType="viewModels:IPlantsDetailViewModel"
              xmlns:models="clr-namespace:plantdration.Models"
              Shell.TitleColor="White"
-             Shell.BackgroundColor="{StaticResource Gray950}"
+             Shell.BackgroundColor="{StaticResource TextColor}"
              Title="Plant Details">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:DateTimeToWaterStatusConverter x:Key="DateTimeToWaterStatusConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ScrollView BackgroundColor="{StaticResource LimeGreen}">
-        <StackLayout Padding="20">
-            <Image Source="{Binding SelectedUserPlant.PhotoPath}" HeightRequest="100" WidthRequest="100" Aspect="AspectFill" />
-            
-            <Label Text="{Binding SelectedPlant.Name}" FontSize="Large" FontAttributes="Bold" TextColor="{StaticResource TextColor}" Margin="0,0,20,15"/>
+        <Grid Padding="20" ColumnDefinitions="*, Auto" ColumnSpacing="20">
 
-            <Label Text="Species:" FontAttributes="Bold" FontSize="Medium" TextColor="#515851"/>
-            <Label Text="{Binding SelectedPlant.Species}" FontSize="Small" TextColor="{StaticResource TextColor}"/>
+            <!-- Details on the Left -->
+            <StackLayout Grid.Column="0" Spacing="10">
 
-            <Label Text="Watering Frequency (days):" FontAttributes="Bold" FontSize="Medium" TextColor="#515851"/>
-            <Label Text="{Binding SelectedPlant.WateringFrequencyInDays}" FontSize="Small" TextColor="{StaticResource TextColor}"/>
+                <!-- Plant Name -->
+                <Label Text="{Binding SelectedPlant.Name}"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       TextColor="{StaticResource TextColor}"
+                       Margin="0,0,0,15"/>
 
-            <Label Text="Last Watered:" FontAttributes="Bold" FontSize="Medium" TextColor="#515851"/>
-            <Label Text="{Binding SelectedUserPlant.LastWatered, StringFormat='{}{0:MM/dd/yyyy}'}" FontSize="Small" TextColor="{StaticResource TextColor}"/>
+                <!-- Plant Details -->
+                <HorizontalStackLayout>
+                    <Label Text="🌿 Species: " FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                    <Label Text="{Binding SelectedPlant.Species}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
 
-            <Button Style="{StaticResource PlantDetailsButtonStyle}" 
-                    Command="{Binding UpdateWateringDateCommand}" 
-                    Text="I watered my plant" 
-                    Margin="0,10,0,10"/>
-            
-            <Label Text="Sunlight Requirement:" FontAttributes="Bold" FontSize="Medium" TextColor="#515851"/>
-            <Label Text="{Binding SelectedPlant.SunlightRequirement}" FontSize="Small" TextColor="{StaticResource TextColor}"/>
+                <HorizontalStackLayout>
+                    <Label Text="💧 Watering Frequency (days): " FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                    <Label Text="{Binding SelectedPlant.WateringFrequencyInDays}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
 
-            <Label Text="Height (cm):" FontAttributes="Bold" FontSize="Medium" TextColor="#515851"/>
-            <Label Text="{Binding SelectedPlant.HeightInCentimeters}" FontSize="Small" TextColor="{StaticResource TextColor}"/>
+                <HorizontalStackLayout>
+                    <Label Text="🕒 Last Watered: " FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                    <Label Text="{Binding SelectedUserPlant.LastWatered, Converter={StaticResource DateTimeToWaterStatusConverter}, StringFormat='{0}'}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
 
-            <Label Text="Growth Rate (cm/year):" FontAttributes="Bold" FontSize="Medium" TextColor="#515851"/>
-            <Label Text="{Binding SelectedPlant.GrowthRateInCmPerYear}" FontSize="Small" TextColor="{StaticResource TextColor}"/>
+                <!-- Update Watering Button -->
+                <Button Style="{StaticResource PlantDetailsButtonStyle}" 
+                        Command="{Binding UpdateWateringDateCommand}" 
+                        Text="👍 I Watered My Plant" 
+                        Margin="0,10,0,10"/>
 
-            <Label Text="Is Indoor Plant:" FontAttributes="Bold" FontSize="Medium" TextColor="#515851"/>
-            <Label Text="{Binding SelectedPlant.IsIndoorPlant, Converter={StaticResource BooleanToTextConverter}}" FontSize="Small" TextColor="{StaticResource TextColor}"/>
+                <HorizontalStackLayout>
+                    <Label Text="☀️ Sunlight Requirement: " FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                    <Label Text="{Binding SelectedPlant.SunlightRequirement}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
 
-            <Label Text="Soil Type:" FontAttributes="Bold" FontSize="Medium" TextColor="#515851"/>
-            <Label Text="{Binding SelectedPlant.SoilType}" FontSize="Small" TextColor="{StaticResource TextColor}"/>
+                <HorizontalStackLayout>
+                    <Label Text="🌱 Height (cm): " FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                    <Label Text="{Binding SelectedPlant.HeightInCentimeters}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
 
-            <Label Text="Minimum Temperature (°C):" FontAttributes="Bold" FontSize="Medium" TextColor="#515851"/>
-            <Label Text="{Binding SelectedPlant.MinTemperature}" FontSize="Small" TextColor="{StaticResource TextColor}"/>
+                <HorizontalStackLayout>
+                    <Label Text="🌿 Growth Rate (cm/year): " FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                    <Label Text="{Binding SelectedPlant.GrowthRateInCmPerYear}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
 
-            
-            <Button Style="{StaticResource PlantDetailsButtonStyle}" 
-                    Command="{Binding CancelCommand}" 
-                    Text="Back"
-                    Margin="0,5,0,0"/>
-        </StackLayout>
+                <HorizontalStackLayout>
+                    <Label Text="🏠 Is Indoor Plant: " FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                    <Label Text="{Binding SelectedPlant.IsIndoorPlant, Converter={StaticResource BooleanToTextConverter}}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text="🪴 Soil Type: " FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                    <Label Text="{Binding SelectedPlant.SoilType}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text="🌡️ Minimum Temperature (°C): " FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                    <Label Text="{Binding SelectedPlant.MinTemperature}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
+
+                <!-- Back Button -->
+                <Button Style="{StaticResource PlantDetailsButtonStyle}" 
+                        Command="{Binding CancelCommand}" 
+                        Text="◀ Back"
+                        Margin="0,5,0,0"/>
+
+            </StackLayout>
+
+            <!-- Plant Image on the Right -->
+            <Frame Grid.Column="1"
+                   Padding="0"
+                   BackgroundColor="White"
+                   CornerRadius="8"
+                   BorderColor="{StaticResource DarkGreen}"
+                   HeightRequest="500"
+                   WidthRequest="500"
+                   Margin="0,0,100,0"
+                   HasShadow="True">
+                <Image Source="{Binding SelectedUserPlant.PhotoPath}" Aspect="AspectFill" />
+            </Frame>
+
+        </Grid>
     </ScrollView>
 </ContentPage>

@@ -1,11 +1,12 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="plantdration.Views.UserListView"
              xmlns:models="clr-namespace:plantdration.Models"
              xmlns:viewModels="clr-namespace:plantdration.ViewModels"
              x:DataType="viewModels:IUserListViewModel"
              Title="Select a User"
-             BackgroundColor="{StaticResource BackgroundWhite}">
+             Shell.BackgroundColor="{StaticResource TextColor}"
+             BackgroundColor="{StaticResource LimeGreen}">
 
     <!-- Toolbar Item for Adding a New User -->
     <ContentPage.ToolbarItems>
@@ -14,35 +15,48 @@
                      IconImageSource="{FontImage Glyph='+', Color=White, Size=22}" />
     </ContentPage.ToolbarItems>
 
-    <!-- Display Users in a List -->
-    <CollectionView ItemsSource="{Binding Users}"
-                    Margin="0"
-                    SelectionMode="Single"
-                    SelectedItem="{Binding SelectedUser}"
-                    SelectionChangedCommand="{Binding SelectUserCommand}"
-                    BackgroundColor="{StaticResource BackgroundWhite}"
-                    Style="{StaticResource CollectionViewStyle}">
+    <!-- Use Grid Layout to arrange elements -->
+    <Grid RowDefinitions="Auto, *" Padding="10">
 
-        <!-- Center the Layout of the Collection View -->
-        <CollectionView.EmptyView>
-            <Label Text="No Users Available" Style="{StaticResource EmptyViewLabelStyle}"/>
-        </CollectionView.EmptyView>
+        <!-- Display centered "Who is using the app?" Text -->
+        <Label Text="Who is using the app?"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontSize="Large"
+               FontAttributes="Bold"
+               TextColor="{StaticResource TextColor}"
+               Margin="0,20,0,20"
+               Grid.Row="0"/>
 
-        <!-- CollectionView Items Layout -->
-        <CollectionView.ItemsLayout>
-            <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
-        </CollectionView.ItemsLayout>
+        <!-- Display Users in a List -->
+        <CollectionView ItemsSource="{Binding Users}"
+                        SelectionMode="Single"
+                        SelectedItem="{Binding SelectedUser}"
+                        SelectionChangedCommand="{Binding SelectUserCommand}"
+                        BackgroundColor="{StaticResource LimeGreen}"
+                        Style="{StaticResource CollectionViewStyle}"
+                        Grid.Row="1">
+            <!-- Center the Layout of the Collection View -->
+            <CollectionView.EmptyView>
+                <Label Text="No Users Available" Style="{StaticResource EmptyViewLabelStyle}" TextColor="{StaticResource TextColor}"/>
+            </CollectionView.EmptyView>
 
-        <!-- Define the Appearance of Each Item in the List -->
-        <CollectionView.ItemTemplate>
-            <DataTemplate x:DataType="models:User">
-                <Frame Style="{StaticResource UserFrameStyle}">
-                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                        <Label Text="{Binding Name}" Style="{StaticResource UserNameLabelStyle}"/>
-                    </StackLayout>
-                </Frame>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+            <!-- CollectionView Items Layout -->
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+
+            <!-- Define the Appearance of Each Item in the List -->
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:User">
+                    <Frame Style="{StaticResource UserFrameStyle}">
+                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                            <Label Text="{Binding Name, StringFormat='➤ {0}'}" Style="{StaticResource UserNameLabelStyle}"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 
 </ContentPage>

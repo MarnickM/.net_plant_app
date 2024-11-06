@@ -28,6 +28,20 @@ namespace plantdration.ViewModels
                 SetProperty(ref user, value);
             }
         }
+
+        private string percentage;
+        public string Percentage
+        {
+            get => percentage;
+            set => SetProperty(ref percentage, value);
+        }
+        private string warningMessage;
+        public string WarningMessage
+        {
+            get => warningMessage;
+            set => SetProperty(ref warningMessage, value);
+        }
+
         private ImageSource photo;
         public ImageSource Photo
         {
@@ -99,12 +113,24 @@ namespace plantdration.ViewModels
                 if (result.TagName.Equals("Negative"))
                 {
                     ClassifiedPlant.Name = "This is not a known plant.";
+                    WarningMessage = "Could not classify this plant.";
                 }
                 else
                 {
                     ClassifiedPlant = await PlantDataService.GetPlantByTag(result.TagName)!;
-                    ClassifiedPlant.Name += " " + percent;
+                    Percentage = percent;
+
+                    // Check if percentage is below 80%
+                    if (result.Probability < 0.80)
+                    {
+                        WarningMessage = "⚠️ Low Confidence, the accuracy for this image is low";
+                    }
+                    else
+                    {
+                        WarningMessage = string.Empty;
+                    }
                 }
+
             }
         }
         private async Task AddPlantToCollection()

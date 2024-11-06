@@ -5,9 +5,10 @@
              xmlns:viewModels="clr-namespace:plantdration.ViewModels"
              x:DataType="viewModels:IDetailsViewModel"
              Title="User"
-             BackgroundColor="{StaticResource BackgroundWhite}">
+             Shell.BackgroundColor="{StaticResource TextColor}"
+             BackgroundColor="{StaticResource LimeGreen}">
 
-    <ScrollView BackgroundColor="{StaticResource BackgroundWhite}">
+    <ScrollView>
         <StackLayout Padding="30">
 
             <Label Text="Name"

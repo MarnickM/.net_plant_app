@@ -19,5 +19,8 @@ namespace plantdration.ViewModels
         Plant ClassifiedPlant { get; set; }
 
         ImageSource Photo { get; set; }
+        string Percentage { get; set; }
+        string WarningMessage { get; set; }
+
     }
 }

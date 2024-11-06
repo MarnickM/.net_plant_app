@@ -5,62 +5,92 @@
              xmlns:viewModels="clr-namespace:plantdration.ViewModels"
              x:DataType="viewModels:IAddPlantViewModel"
              Shell.TitleColor="White"
-             Shell.BackgroundColor="ForestGreen"
+             Shell.BackgroundColor="{StaticResource TextColor}"
              Title="Add Plant">
 
-    <ScrollView BackgroundColor="LimeGreen">
+    <ScrollView BackgroundColor="{StaticResource LimeGreen}">
         <StackLayout Padding="30" Spacing="15">
 
             <!-- Take/Select Photo Buttons -->
             <HorizontalStackLayout Spacing="5" HorizontalOptions="Center">
-                <Button BackgroundColor="ForestGreen" TextColor="White" Command="{Binding TakePhotoCommand}" 
-            Text="Take Photo" />
-                <Button BackgroundColor="ForestGreen" TextColor="White" Command="{Binding PickPhotoCommand}" 
-            Text="Pick Photo" />
+                <Button Style="{StaticResource PlantDetailsButtonStyle}" TextColor="White" Command="{Binding TakePhotoCommand}" 
+                        Text="📸 Take Photo" />
+                <Button Style="{StaticResource PlantDetailsButtonStyle}" TextColor="White" Command="{Binding PickPhotoCommand}" 
+                        Text="🖼️ Pick Photo" />
             </HorizontalStackLayout>
 
-            <Image Source="{Binding Photo}"	Aspect="AspectFill"
-				HeightRequest="300"	WidthRequest="300" />
+            <!-- Plant Photo -->
+            <Image Source="{Binding Photo}" Aspect="AspectFill"
+                   HeightRequest="300" WidthRequest="300" />
 
-            <!-- Plant Name -->
-            <Label Text="Name:" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.Name}" FontSize="Medium"/>
+            <HorizontalStackLayout>
+                <Label Text="{Binding ClassifiedPlant.Name}" FontSize="Large" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label Text="📊 Confidence:" FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                <Label Text="{Binding Percentage}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
+
+            <!-- Warning Message -->
+            <Label Text="{Binding WarningMessage}" FontSize="Medium" FontAttributes="Italic" 
+                   TextColor="Red" Margin="10,5,0,0"/>
 
             <!-- Species -->
-            <Label Text="Species:" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.Species}" FontSize="Medium"/>
+            <HorizontalStackLayout>
+                <Label Text="🌿 Species:" FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                <Label Text="{Binding ClassifiedPlant.Species}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
 
             <!-- Watering Frequency -->
-            <Label Text="Watering Frequency (days):" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.WateringFrequencyInDays}" FontSize="Medium"/>
+            <HorizontalStackLayout>
+                <Label Text="💧 Watering Frequency (days):" FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                <Label Text="{Binding ClassifiedPlant.WateringFrequencyInDays}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
 
             <!-- Sunlight Requirement -->
-            <Label Text="Sunlight Requirement:" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.SunlightRequirement}" FontSize="Medium"/>
+            <HorizontalStackLayout>
+                <Label Text="☀️ Sunlight Requirement:" FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                <Label Text="{Binding ClassifiedPlant.SunlightRequirement}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
 
             <!-- Height in Centimeters -->
-            <Label Text="Height (cm):" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.HeightInCentimeters}" FontSize="Medium"/>
+            <HorizontalStackLayout>
+                <Label Text="📏 Height (cm):" FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                <Label Text="{Binding ClassifiedPlant.HeightInCentimeters}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
 
             <!-- Growth Rate in cm/year -->
-            <Label Text="Growth Rate (cm/year):" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.GrowthRateInCmPerYear}" FontSize="Medium"/>
+            <HorizontalStackLayout>
+                <Label Text="🌱 Growth Rate (cm/year):" FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                <Label Text="{Binding ClassifiedPlant.GrowthRateInCmPerYear}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
 
             <!-- Indoor Plant -->
-            <Label Text="Is Indoor Plant:" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.IsIndoorPlant}" FontSize="Medium"/>
+            <HorizontalStackLayout>
+                <Label Text="🏠 Is Indoor Plant:" FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                <Label Text="{Binding ClassifiedPlant.IsIndoorPlant}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
 
             <!-- Soil Type -->
-            <Label Text="Soil Type:" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.SoilType}" FontSize="Medium"/>
+            <HorizontalStackLayout>
+                <Label Text="🪴 Soil Type:" FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                <Label Text="{Binding ClassifiedPlant.SoilType}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
 
             <!-- Minimum Temperature -->
-            <Label Text="Minimum Temperature (°C):" FontAttributes="Bold"/>
-            <Label Text="{Binding ClassifiedPlant.MinTemperature}" FontSize="Medium"/>
+            <HorizontalStackLayout>
+                <Label Text="🌡️ Minimum Temperature (°C):" FontAttributes="Bold" FontSize="Medium" Margin="0,0,10,0" TextColor="#515851"/>
+                <Label Text="{Binding ClassifiedPlant.MinTemperature}" FontSize="Medium" TextColor="{StaticResource TextColor}"/>
+            </HorizontalStackLayout>
 
-            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Add Plant" Command="{Binding AddPlantCommand}" />
-            <Button BackgroundColor="ForestGreen" TextColor="White" Text="Back" Command="{Binding GoBackCommand}" Margin="0,5,0,0"/>
+            <!-- Add Plant Button -->
+            <Button Style="{StaticResource PlantDetailsButtonStyle}" TextColor="White" Text="🌿 Add Plant" 
+                    Command="{Binding AddPlantCommand}" Margin="0,20,0,0"/>
 
+            <!-- Back Button -->
+            <Button Style="{StaticResource PlantDetailsButtonStyle}" TextColor="White" Text="◀ Back" 
+                    Command="{Binding GoBackCommand}" Margin="0,5,0,0"/>
 
         </StackLayout>
     </ScrollView>
