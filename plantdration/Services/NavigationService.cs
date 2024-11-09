@@ -22,9 +22,6 @@ namespace plantdration.Services
 
         public async Task NavigateToDetailsPageAsync()
         {
-            // Dit is de slechte manier omdat we new DetailsPage(new DetailsViewModel(new NavigationService())) doen.
-            //await _navigation.PushAsync(new DetailsPage(new DetailsViewModel(new NavigationService())));
-            // Dit is de manier dat het moet met de serviceprovider. Je voegt de detailspagina toe aan de serviceprovider bij de mauiProgram.
             await _navigation.PushAsync(_serviceProvider.GetRequiredService<DetailsView>());
         }
 

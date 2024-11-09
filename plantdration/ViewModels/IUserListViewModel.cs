@@ -7,7 +7,6 @@ namespace plantdration.ViewModels
     public interface IUserListViewModel
     {
         ICommand AddUserCommand {  get; set; }
-        /*ICommand UpdateUserCommand { get; set; }*/
         ICommand SelectUserCommand { get; set; }
         User SelectedUser { get; set; }
         ObservableCollection<User> Users { get; set; }

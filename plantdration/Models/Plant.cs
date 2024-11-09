@@ -12,11 +12,9 @@ namespace plantdration.Models
         private string sunlightRequirement = string.Empty;
         private double heightInCentimeters;
         private double growthRateInCmPerYear;
-        public DateTime lastWatered;
         private bool isIndoorPlant;
         private string soilType = string.Empty;
         private double minTemperature;
-        private string photoUrl = string.Empty;
 
         private string tag = string.Empty;
         public string Tag
@@ -41,13 +39,6 @@ namespace plantdration.Models
         {
             get => species;
             set => SetProperty(ref species, value);
-        }
-
-        /*Dit moet nog verwijdert worden*/
-        public DateTime LastWatered
-        {
-            get => lastWatered;
-            set => SetProperty(ref lastWatered, value);
         }
 
         public int WateringFrequencyInDays
@@ -90,12 +81,6 @@ namespace plantdration.Models
         {
             get => minTemperature;
             set => SetProperty(ref minTemperature, value);
-        }
-
-        public string PhotoUrl
-        {
-            get => photoUrl;
-            set => SetProperty(ref photoUrl, value);
         }
     }
 }

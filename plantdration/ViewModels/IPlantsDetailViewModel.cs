@@ -12,7 +12,6 @@ namespace plantdration.ViewModels
     {
         UserPlant SelectedUserPlant { get; set; }
         Plant SelectedPlant { get; set; }
-        /*ICommand SaveCommand { get; set; }*/
         ICommand CancelCommand { get; set; }
         ICommand UpdateWateringDateCommand { get; set; }
     }

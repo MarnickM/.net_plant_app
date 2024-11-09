@@ -17,24 +17,12 @@ namespace plantdration.Models
 
         public async static Task CreateUserPlant(UserPlant userPlant)
         {
-            /*Debug.WriteLine("Creating user plant:");
-            Debug.WriteLine("Plant ID: " + userPlant.PlantId);
-            Debug.WriteLine("User ID " + userPlant.UserId);
-            Debug.WriteLine("Last watered: " + userPlant.LastWatered);
-            Debug.WriteLine("When this was assigned " + userPlant.DateAssigned);*/
             await ApiService<UserPlant>.PostAsync("UserPlants", userPlant);
         }
 
         public async static Task UpdateUserPlant(UserPlant userPlant)
         {
-            Debug.WriteLine("Updating user plant:");
-            Debug.WriteLine("User ID: " + userPlant.UserId);
-            Debug.WriteLine("Plant ID: " + userPlant.PlantId);
-            Debug.WriteLine("Last watered: " + userPlant.LastWatered);
-            Debug.WriteLine("When this was assigned: " + userPlant.DateAssigned);
-
             string endPoint = $"UserPlants/{userPlant.UserId}/{userPlant.PlantId}";
-
             await ApiService<UserPlant>.PutAsync(endPoint, userPlant);
         }
 
