@@ -23,16 +23,6 @@ namespace plantdration.Models
             get => name;
             set => SetProperty(ref name, value);
         }
-
-        public User(int id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
-
-        public User()
-        {
-        }
     }
 }
 

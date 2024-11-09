@@ -53,7 +53,6 @@ namespace plantdration.ViewModels
 
         private void BindCommands()
         {
-            /*SaveCommand = new AsyncRelayCommand(SavePlantDetails);*/
             CancelCommand = new AsyncRelayCommand(Back);
             UpdateWateringDateCommand = new RelayCommand(UpdateWateringDate);
         }
@@ -63,12 +62,6 @@ namespace plantdration.ViewModels
             SelectedUserPlant.LastWatered = DateTime.Now;
             await UserPlantDataService.UpdateUserPlant(SelectedUserPlant);
         }
-
-        /*        private async Task SavePlantDetails()
-                {
-                    await _navigationService.NavigateToHomePageAsync();
-                    UserPlantDataService.UpdateUserPlant(SelectedUserPlant);
-                }*/
 
         private async Task Back()
         {

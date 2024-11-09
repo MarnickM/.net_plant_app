@@ -34,15 +34,13 @@ namespace plantdrationAPI
                 Name = "Chrysanthemum",
                 tag = "chrysant",
                 Species = "Chrysanthemum morifolium",
-                WateringFrequencyInDays = 7, // Weekly
+                WateringFrequencyInDays = 7,
                 SunlightRequirement = "Full sun to partial shade",
                 HeightInCentimeters = 60,
-                GrowthRateInCmPerYear = 20, // Example value, modify as needed
-                /*LastWatered = DateTime.Now,*/
+                GrowthRateInCmPerYear = 20,
                 IsIndoorPlant = false,
                 SoilType = "Well-draining soil",
-                MinTemperature = 15,
-                PhotoUrl = "chrysanthemum.jpg" // Placeholder image URL
+                MinTemperature = 15
             };
 
             var plant2 = new Plant
@@ -50,15 +48,13 @@ namespace plantdrationAPI
                 Name = "Succulent",
                 tag = "crassulamuscosa",
                 Species = "Crassula muscosa",
-                WateringFrequencyInDays = 14, // Biweekly
+                WateringFrequencyInDays = 14,
                 SunlightRequirement = "Full sun to partial shade",
                 HeightInCentimeters = 30,
-                GrowthRateInCmPerYear = 15, // Example value, modify as needed
-                /*LastWatered = DateTime.Now,*/
+                GrowthRateInCmPerYear = 15,
                 IsIndoorPlant = true,
                 SoilType = "Cactus mix",
-                MinTemperature = 10,
-                PhotoUrl = "crassula_muscosa.jpg" // Placeholder image URL
+                MinTemperature = 10
             };
 
             var plant3 = new Plant
@@ -69,12 +65,10 @@ namespace plantdrationAPI
                 WateringFrequencyInDays = 14,
                 SunlightRequirement = "Full sun",
                 HeightInCentimeters = 30,
-                GrowthRateInCmPerYear = 15, // Example value, modify as needed
-                /*LastWatered = DateTime.Now,*/
+                GrowthRateInCmPerYear = 15,
                 IsIndoorPlant = true,
                 SoilType = "Cactus mix",
-                MinTemperature = 10,
-                PhotoUrl = "crassula_perforata.jpg" // Placeholder image URL
+                MinTemperature = 10
             };
 
             var plant4 = new Plant
@@ -85,12 +79,10 @@ namespace plantdrationAPI
                 WateringFrequencyInDays = 14,
                 SunlightRequirement = "Full sun",
                 HeightInCentimeters = 50,
-                GrowthRateInCmPerYear = 10, // Example value, modify as needed
-                /*LastWatered = DateTime.Now,*/
+                GrowthRateInCmPerYear = 10,
                 IsIndoorPlant = false,
                 SoilType = "Sandy, well-draining soil",
-                MinTemperature = 10,
-                PhotoUrl = "euphorbia_nivulia.jpg" // Placeholder image URL
+                MinTemperature = 10
             };
 
             var plant5 = new Plant
@@ -101,12 +93,10 @@ namespace plantdrationAPI
                 WateringFrequencyInDays = 7,
                 SunlightRequirement = "Indirect sunlight",
                 HeightInCentimeters = 60,
-                GrowthRateInCmPerYear = 30, // Example value, modify as needed
-                /*LastWatered = DateTime.Now,*/
+                GrowthRateInCmPerYear = 30,
                 IsIndoorPlant = true,
                 SoilType = "Good potting soil",
-                MinTemperature = 10,
-                PhotoUrl = "chlorophytum_comosum.jpg" // Placeholder image URL
+                MinTemperature = 10
             };
 
             var plant6 = new Plant
@@ -114,15 +104,13 @@ namespace plantdrationAPI
                 Name = "Orchid",
                 tag = "orchidaceae",
                 Species = "Orchidaceae",
-                WateringFrequencyInDays = 7, // Every 7-10 days
+                WateringFrequencyInDays = 7,
                 SunlightRequirement = "Indirect sunlight",
-                HeightInCentimeters = 60, // Varies widely
-                GrowthRateInCmPerYear = 5, // Example value, modify as needed
-                /*LastWatered = DateTime.Now,*/
+                HeightInCentimeters = 60,
+                GrowthRateInCmPerYear = 5,
                 IsIndoorPlant = true,
                 SoilType = "Orchid mix (bark)",
-                MinTemperature = 20,
-                PhotoUrl = "orchidaceae.jpg" // Placeholder image URL
+                MinTemperature = 20
             };
 
             var plant7 = new Plant
@@ -133,12 +121,10 @@ namespace plantdrationAPI
                 WateringFrequencyInDays = 21,
                 SunlightRequirement = "Full sun",
                 HeightInCentimeters = 30,
-                GrowthRateInCmPerYear = 10, // Example value, modify as needed
-                /*LastWatered = DateTime.Now,*/
+                GrowthRateInCmPerYear = 10,
                 IsIndoorPlant = false,
                 SoilType = "Well-draining soil",
-                MinTemperature = 5,
-                PhotoUrl = "phedimus_kamtschaticus.jpg" // Placeholder image URL
+                MinTemperature = 5
             };
 
             var plant8 = new Plant
@@ -149,12 +135,10 @@ namespace plantdrationAPI
                 WateringFrequencyInDays = 21,
                 SunlightRequirement = "Full sun",
                 HeightInCentimeters = 15,
-                GrowthRateInCmPerYear = 5, // Example value, modify as needed
-                /*LastWatered = DateTime.Now,*/
+                GrowthRateInCmPerYear = 5,
                 IsIndoorPlant = true,
                 SoilType = "Cactus mix",
-                MinTemperature = 10,
-                PhotoUrl = "sedum_hernandezii.jpg" // Placeholder image URL
+                MinTemperature = 10
             };
 
             var plant9 = new Plant
@@ -165,12 +149,10 @@ namespace plantdrationAPI
                 WateringFrequencyInDays = 21,
                 SunlightRequirement = "Full sun",
                 HeightInCentimeters = 40,
-                GrowthRateInCmPerYear = 3, // Example value, modify as needed
-                /*LastWatered = DateTime.Now,*/
+                GrowthRateInCmPerYear = 3,
                 IsIndoorPlant = false,
                 SoilType = "Cactus mix",
-                MinTemperature = 10,
-                PhotoUrl = "tephrocactus_verschaffeltii.jpg" // Placeholder image URL
+                MinTemperature = 10
             };
 
             context.Plants.AddRange(plant1, plant2, plant3, plant4, plant5, plant6, plant7, plant8, plant9);

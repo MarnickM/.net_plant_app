@@ -7,11 +7,6 @@ namespace plantdration.Services
 {
     public static class ApiService<T>
     {
-        /*Marnick MockAPI*//*
-        private static readonly string BASE_URL = "https://66fbd9998583ac93b40d75ba.mockapi.io/";*/
-        /*Sen MockAPI*/
-        /*private static readonly string BASE_URL = "https://66fbd9a28583ac93b40d765f.mockapi.io/";*/
-
         private static readonly string BASE_URL = "https://localhost:7036/api/";
         static HttpClient client = new HttpClient() { Timeout = TimeSpan.FromSeconds(60) };
 

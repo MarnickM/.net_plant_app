@@ -34,16 +34,6 @@ namespace plantdration.ViewModels
             set => SetProperty(ref user, value);
         }
 
-        /*        private ObservableCollection<Plant> plants = new ObservableCollection<Plant>();
-        public ObservableCollection<Plant> Plants
-        {
-            get => plants;
-            set
-            {
-                SetProperty(ref plants, value);
-            }
-        }
-*/
         public ObservableCollection<PlantCardViewModel> PlantCards { get; } = new ObservableCollection<PlantCardViewModel>();
 
         private INavigationService _navigationService;

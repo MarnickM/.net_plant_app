@@ -30,20 +30,8 @@
             </Frame>
 
             <!-- Save Button -->
-            <Button Text="{Binding SaveText}"
+            <Button Text="Add"
                     Command="{Binding SaveCommand}"
-                    BackgroundColor="{StaticResource PrimaryGreen}"
-                    TextColor="White"
-                    CornerRadius="10"
-                    WidthRequest="150"
-                    HorizontalOptions="Center"
-                    Margin="0,5"
-                    HeightRequest="50"/>
-
-            <!-- Delete Button -->
-            <Button Text="Delete"
-                    Command="{Binding DeleteCommand}"
-                    IsVisible="{Binding CanDelete}"
                     BackgroundColor="{StaticResource PrimaryGreen}"
                     TextColor="White"
                     CornerRadius="10"

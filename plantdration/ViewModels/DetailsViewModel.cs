@@ -13,14 +13,8 @@ using System.Windows.Input;
 
 namespace plantdration.ViewModels
 {
-    public class DetailsViewModel : ObservableRecipient, IDetailsViewModel, IRecipient<UserSelectedMessage>
+    public class DetailsViewModel : ObservableRecipient, IDetailsViewModel
     {
-        public void Receive(UserSelectedMessage message)
-        {
-            User = message.Value;
-            SaveText = "Update";
-        }
-
         private User user = new User();
 
         public User User
@@ -32,25 +26,7 @@ namespace plantdration.ViewModels
             }
         }
 
-        private string saveText = "Add";
-
-        public string SaveText
-        {
-            get => saveText;
-            set
-            {
-                SetProperty(ref saveText, value);
-                OnPropertyChanged(nameof(CanDelete));
-            }
-        }
-
-        public bool CanDelete
-        {
-            get => SaveText == "Update";
-        }
-
         public ICommand SaveCommand { get; set; }
-        public ICommand DeleteCommand { get; set; }
         public ICommand CancelCommand { get; set; }
 
         private INavigationService _navigationService;
@@ -59,35 +35,19 @@ namespace plantdration.ViewModels
         {
             _navigationService = navigationService;
 
-            Messenger.Register<DetailsViewModel, UserSelectedMessage>(this, (r, m) => r.Receive(m));
-
             BindCommands();
         }
 
         private void BindCommands()
         {
             SaveCommand = new AsyncRelayCommand(SaveAndGoBack);
-            DeleteCommand = new AsyncRelayCommand(DeleteAndGoBack);
             CancelCommand = new AsyncRelayCommand(GoBack);
         }
 
         private async Task SaveAndGoBack()
         {
-            if (SaveText == "Add")
-            {
-                await UserDataService.InsertUserAsync(User);
-            }
-            else
-            {
-                await UserDataService.UpdateUserAsync(User);
-            }
-            WeakReferenceMessenger.Default.Send(new RefreshUsersMessage());
-            await _navigationService.NavigateBackAsync();
-        }
-
-        private async Task DeleteAndGoBack()
-        {
-            await UserDataService.DeleteUserAsync(User.Id);
+            
+            await UserDataService.InsertUserAsync(User);
             WeakReferenceMessenger.Default.Send(new RefreshUsersMessage());
             await _navigationService.NavigateBackAsync();
         }

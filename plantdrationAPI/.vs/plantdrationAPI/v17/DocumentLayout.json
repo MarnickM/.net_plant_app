@@ -3,55 +3,55 @@
   "WorkspaceRootPath": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\models\\userplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\userplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\models\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\controllers\\plantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:controllers\\plantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\controllers\\userplantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:controllers\\userplantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\dal\\userplantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\userplantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/plantdrationAPI/True/SqlTable/dbo.UserPlant.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\dal\\plantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\plantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\dal\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\dal\\plantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\plantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\dal\\userplantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\userplantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:dal\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\models\\userplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\userplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\controllers\\plantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:controllers\\plantscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\models\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:models\\plant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/plantdrationAPI/True/SqlTable/dbo.UserPlant.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|c:\\users\\marni\\desktop\\thomas more\\jaar 3\\.net adv\\project\\.net_plant_app\\plantdrationapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57CC670E-ADE3-49E3-836C-82F7ACD4F666}|plantdrationAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,7 +61,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -89,86 +89,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
+              "DocumentIndex": 4,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\IRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\IRepository.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\IRepository.cs",
+              "RelativeToolTip": "DAL\\IRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:51:11.531Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserPlantRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\UserPlantRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\UserPlantRepository.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\UserPlantRepository.cs",
-              "RelativeToolTip": "DAL\\UserPlantRepository.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAYwCgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:16:51.012Z"
+              "WhenOpened": "2024-10-30T11:24:49.934Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "userPlantsController.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\userPlantsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\userPlantsController.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\userPlantsController.cs",
-              "RelativeToolTip": "Controllers\\userPlantsController.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAAwwEYAAAAqAAAA",
+              "Title": "usersController.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\usersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\usersController.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\usersController.cs",
+              "RelativeToolTip": "Controllers\\usersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:16:37.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserPlant.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\UserPlant.cs",
-              "RelativeDocumentMoniker": "Models\\UserPlant.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\UserPlant.cs",
-              "RelativeToolTip": "Models\\UserPlant.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAQwAQAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T09:47:38.796Z",
+              "WhenOpened": "2024-10-29T15:16:52.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Plant.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\Plant.cs",
-              "RelativeDocumentMoniker": "Models\\Plant.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\Plant.cs",
-              "RelativeToolTip": "Models\\Plant.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Title": "userPlantsController.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\userPlantsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\userPlantsController.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\userPlantsController.cs",
+              "RelativeToolTip": "Controllers\\userPlantsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T09:47:32.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\UserRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\UserRepository.cs",
-              "RelativeToolTip": "DAL\\UserRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:15:49.282Z"
+              "WhenOpened": "2024-10-29T15:16:37.723Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "plantsController.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\plantsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\plantsController.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\plantsController.cs",
+              "RelativeToolTip": "Controllers\\plantsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T09:51:29.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "DBInitializer.cs",
               "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DBInitializer.cs",
               "RelativeDocumentMoniker": "DBInitializer.cs",
               "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DBInitializer.cs",
               "RelativeToolTip": "DBInitializer.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwB8AAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-29T15:42:52.182Z",
               "EditorCaption": ""
@@ -176,6 +155,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "PlantRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\PlantRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\PlantRepository.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\PlantRepository.cs",
+              "RelativeToolTip": "DAL\\PlantRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T11:24:52.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserPlantRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\UserPlantRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\UserPlantRepository.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\UserPlantRepository.cs",
+              "RelativeToolTip": "DAL\\UserPlantRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:16:51.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\UserRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\UserRepository.cs",
+              "RelativeToolTip": "DAL\\UserRepository.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T15:15:49.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserPlant.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\UserPlant.cs",
+              "RelativeDocumentMoniker": "Models\\UserPlant.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\UserPlant.cs",
+              "RelativeToolTip": "Models\\UserPlant.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T09:47:38.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T11:51:11.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Plant.cs",
+              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\Plant.cs",
+              "RelativeDocumentMoniker": "Models\\Plant.cs",
+              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Models\\Plant.cs",
+              "RelativeToolTip": "Models\\Plant.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T09:47:32.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "dbo.UserPlant [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/plantdrationAPI/True/SqlTable/dbo.UserPlant.sql",
               "ToolTip": "dbo.UserPlant [Data]",
@@ -184,43 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "usersController.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\usersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\usersController.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\usersController.cs",
-              "RelativeToolTip": "Controllers\\usersController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAFQAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T15:16:52.617Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\IRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\IRepository.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\IRepository.cs",
-              "RelativeToolTip": "DAL\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:24:49.934Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PlantRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\PlantRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\PlantRepository.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\DAL\\PlantRepository.cs",
-              "RelativeToolTip": "DAL\\PlantRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAkwCIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:24:52.076Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -229,18 +250,6 @@
               "ViewState": "AQIAAAQAAAAAAAAAAAAswBQAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-29T15:43:53.494Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "plantsController.cs",
-              "DocumentMoniker": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\plantsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\plantsController.cs",
-              "ToolTip": "C:\\Users\\Marni\\Desktop\\Thomas More\\Jaar 3\\.NET adv\\project\\.net_plant_app\\plantdrationAPI\\Controllers\\plantsController.cs",
-              "RelativeToolTip": "Controllers\\plantsController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAgwGUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T09:51:29.717Z"
             }
           ]
         }

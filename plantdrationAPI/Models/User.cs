@@ -6,6 +6,6 @@
         public string Name { get; set; }
 
         // A user has many plants, through the association table
-        public List<UserPlant> UserPlants { get; set; }
+        public List<UserPlant>? UserPlants { get; set; }
     }
 }

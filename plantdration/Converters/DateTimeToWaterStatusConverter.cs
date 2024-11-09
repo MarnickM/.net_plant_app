@@ -22,6 +22,7 @@ namespace plantDration.Converters
             return "💧 Not watered yet";  // Fallback text
         }
 
+        // this must be added in order to use this interface but we don't use it in our app
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();
