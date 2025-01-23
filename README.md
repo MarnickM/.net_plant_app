@@ -23,18 +23,6 @@
 
 ---
 
-## Screenshots
-
-![Screenshot 1](screenshots/screenshot1.png)  
-*Plant Identification Screen*
-
-![Screenshot 2](screenshots/screenshot2.png)  
-*Plant Care Details Screen*
-
-![Screenshot 3](screenshots/screenshot3.png)  
-*Plant Management Screen*
-
----
 
 ## Technologies Used
 
